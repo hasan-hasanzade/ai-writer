@@ -3,7 +3,7 @@ import styles from './howitworks.module.scss'
 
 const HowItWorks = () => {
   return (
-    <div className={styles.how}>
+    <section className={styles.how}>
       <div className="container">
         <div className={styles.body}>
             <div className={styles.title}>How It Works</div>
@@ -29,7 +29,7 @@ const HowItWorks = () => {
             </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

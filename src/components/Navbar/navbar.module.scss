@@ -28,6 +28,18 @@
       }
 }
 
+.logo {
+    font-family: Arial, Helvetica, sans-serif!important;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.navWrap {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
 .body {
     display: flex;
     justify-content: space-between;
@@ -42,7 +54,5 @@
 }
 
 .login {
-    font-weight: 900;
-    font-size: 20px;
     color: $secondaryText;
 }

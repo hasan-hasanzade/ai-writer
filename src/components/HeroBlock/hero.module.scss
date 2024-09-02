@@ -2,15 +2,27 @@
 @import '../../scss/typhography';
 
 .hero {
-    padding: 100px 0;
+    padding: 150px 0;
 }
 .textContent {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .title {
     font-size: 26px;
     font-weight: 700;
     line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.transit {
+  width: 200px;
+  color: #2684FC;
 }
 .subtitle {
     margin-top: 20px;
@@ -59,6 +71,15 @@
     color: #757575;
 }
 
+.clearIcon {
+  position: absolute;
+  content: '';
+  top: 16px;
+  z-index: 1;
+  right: 16px;
+  color: #757575;
+}
+
 .searchBtn {
     display: flex;
     margin-top: 34px;
@@ -66,7 +87,7 @@
       padding: 20px 34px 20px 34px;
       font-size: 16px;
       background-color: #22E0A7;
-      color: white;
+      color: #000;
       border: none;
       cursor: pointer;
      
@@ -75,81 +96,11 @@
         background-color: #42d3a7;
       }
       button{
-        margin-left: 20px;
+        margin-left: 7px;
         font-weight: 700;
         font-family: $fontFamily;
         font-size: 18px;
       }
   }
-  
-  .loader {
-    display: block;
-    position: relative;
-    width: 50%;
-    display: grid;
-    place-items: center;
-    
-    &::before,
-    &::after {
-      content: '';
-      box-sizing: border-box;
-      position: absolute;
-    }
-  
-    &.--7 {
-      &::before,
-      &::after {
-        width: 13px;
-        height: 13px;
-        background-color: #fff;
-      }
-  
-      &::before {
-        top: calc(50% - 13px);
-        left: calc(50% - 13px);
-        animation: loader-6 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
-      }
-  
-      &::after {
-        top: 50%;
-        left: 50%;
-        animation: loader-7 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
-      }
-    }
-  }
-  
-  @keyframes loader-7 {
-    0%, 100% {
-      transform: none;
-    }
-    
-    25% {
-      transform: translateX(-100%);
-    }
-    
-    50% {
-      transform: translateX(-100%) translateY(-100%);
-    }
-    
-    75% {
-      transform: translateY(-100%);
-    }
-  }
 
-  @keyframes loader-6 {
-	0%, 100% {
-		transform: none;
-	}
-	
-	25% {
-		transform: translateX(100%);
-	}
-	
-	50% {
-		transform: translateX(100%) translateY(100%);
-	}
-	
-	75% {
-		transform: translateY(100%);
-	}
-}
+ 

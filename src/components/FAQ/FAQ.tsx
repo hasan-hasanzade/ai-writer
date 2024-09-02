@@ -4,7 +4,7 @@ import Accordion from '../Accordion/Accordion'
 
 const FAQ = () => {
   return (
-    <div className={styles.faq}>
+    <section className={styles.faq}>
         <div className="container">
             <div className={styles.body}>
                 <h2 className={styles.title}>F.A.Q</h2>
@@ -49,7 +49,7 @@ const FAQ = () => {
             </div>
             </div>
         </div>
-    </div>
+    </section>
   )
 }
 

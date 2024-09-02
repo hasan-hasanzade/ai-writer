@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const SiteMap = () => {
   return (
-    <div className={styles.sitemap}>
+    <section className={styles.sitemap}>
       <div className="container">
         <div className={styles.body}>
             <div className={styles.item}>
@@ -46,7 +46,7 @@ const SiteMap = () => {
             </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

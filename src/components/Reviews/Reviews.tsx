@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 
 const Reviews = () => {
   return (
-    <div className={styles.reviews}>
+    <section className={styles.reviews}>
       <div className="container">
         <div className={styles.body}>
             <h2 className={styles.title}>Reviews</h2>
@@ -88,7 +88,7 @@ const Reviews = () => {
         </Swiper>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

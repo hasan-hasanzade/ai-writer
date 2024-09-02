@@ -3,7 +3,7 @@ import styles from './advantages.module.scss'
 
 const Advantages = () => {
   return (
-    <div className={styles.advantages}>
+    <section className={styles.advantages}>
       <div className="container">
         <div className={styles.body}>
             <div className={styles.title}>Advantages</div>
@@ -33,7 +33,7 @@ const Advantages = () => {
             </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
