@@ -1,0 +1,45 @@
+.how {
+    padding: 80px 0;
+}
+
+.title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    margin-top: 75px;
+}
+
+.item {
+    width: 33.333%;
+    padding: 56px 32px 32px;
+    background-color: #fff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+    background-color: #333;
+    border-radius: 31.25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: -85px;
+}
+
+.text {
+    margin-top: 40px;
+    line-height: 30px;
+}

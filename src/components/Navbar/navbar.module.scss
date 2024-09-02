@@ -1,0 +1,48 @@
+@import '../../scss/colors.scss';
+
+
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: rgba(0, 16, 36, .12);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+      }
+    
+      &.scrolled::before {
+        opacity: 1;
+      }
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.login {
+    font-weight: 900;
+    font-size: 20px;
+    color: $secondaryText;
+}
