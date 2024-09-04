@@ -24,12 +24,12 @@ const HeroBlock = () => {
       <div className="container">
         <div className={styles.body}>
             <div className={styles.textContent}>
-                <h1 className={styles.title}>Create in 40 seconds using a neural network:<TextTransition className={styles.transit} springConfig={presets.default}>{TEXTS[index % TEXTS.length]}</TextTransition></h1>
+                <h1 className={styles.title}>Create using a neural network:<TextTransition className={styles.transit} springConfig={presets.default}>{TEXTS[index % TEXTS.length]}</TextTransition></h1>
                 <h2 className={styles.subtitle}>Generate text with a table of contents, with a uniqueness of over 80%.</h2>
             </div>
             <div className={styles.searchContent}>
                 <div className={styles.inputWrapper}>
-                    <SearchIcon className={styles.searchIcon} width={22} height={24}/>
+                    {/* <SearchIcon className={styles.searchIcon} width={22} height={24}/> */}
                     <input 
                     id="login"
                     placeholder="Please enter the topic..." 

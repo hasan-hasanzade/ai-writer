@@ -1,5 +1,5 @@
 .advantages {
-    padding: 80px 0;
+    padding: 0 0 80px 0;
 }
 
 .title {
@@ -20,9 +20,6 @@
     background-color: #fff;
     border-radius: 24px;
     transition: background .3s ease;
-    &:hover {
-        background-color: #22E0A7;
-    }
 }
 
 .boxTitle {
@@ -48,7 +45,4 @@
     background-color: #fff;
     border-radius: 24px;
     transition: background .3s ease;
-    &:hover {
-        background-color: #22E0A7;
-    }
 }
