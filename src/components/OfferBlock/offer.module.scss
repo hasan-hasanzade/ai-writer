@@ -4,6 +4,9 @@
     position: fixed;
     top: 0;
     right: 300px;
+    @media (max-width: 1400px) {
+        right: 100px;
+    }
 }
 
 .body {
