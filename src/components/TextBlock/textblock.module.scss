@@ -1,0 +1,101 @@
+.textBlock {
+    padding: 150px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.body {
+    width: 728px;
+
+
+}
+
+.projectInfo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.projectType {
+    font-weight: 700;
+}
+
+.projectDate {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.views {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.projectTitle{
+    margin-top: 20px;
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 900;
+}
+
+.projectAnnotation {
+    margin-top: 20px;
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+.table {
+    margin-top: 45px;
+}
+
+.tableTitle {
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+}
+.list {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+.link {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    color: rgb(135, 135, 135);
+    transition: all .3s ease;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.textBox {
+    padding-top: 85px;
+}
+
+.textBoxTitle {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.textBoxContent {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+}
+
+.subsection {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

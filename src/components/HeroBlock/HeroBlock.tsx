@@ -29,7 +29,6 @@ const HeroBlock = () => {
             </div>
             <div className={styles.searchContent}>
                 <div className={styles.inputWrapper}>
-                    {/* <SearchIcon className={styles.searchIcon} width={22} height={24}/> */}
                     <input 
                     id="login"
                     placeholder="Please enter the topic..." 

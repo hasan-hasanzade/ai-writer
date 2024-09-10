@@ -1,0 +1,40 @@
+.chatFilter {
+    padding: 100px 0 22px 0;
+    background-color: #fff;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 50px 0 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.image {
+    width: 40px;
+    height: 40px;
+    background-color: #101010;
+    border-radius: 50%;
+}

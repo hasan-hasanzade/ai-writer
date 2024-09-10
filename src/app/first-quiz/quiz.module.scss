@@ -1,0 +1,125 @@
+
+.quiz {
+    padding: 150px 0;
+}
+
+.body {
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, .1), 0 12px 12px rgb(0 0 0 / 4%), 0 12px 20px rgb(0 0 0 / 4%), 0 6px 5px rgb(0 0 0 / 4%), inset 0 5px 0 #3e4757;
+    padding: 64px 140px;
+}
+
+.title {
+    font-size: 45px;
+    text-align: center;
+    font-weight: 900;
+  }
+
+.subtitle {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 25px;
+  }
+
+.textSize {
+    margin-top: 50px;
+}
+
+.sizeTitle {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.minMax {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.minValue,.maxValue {
+    font-weight: 700;
+}
+
+.wordRange {
+    margin-top: 45px;
+}
+
+.pageCount {
+    margin-top: 35px;
+    font-weight: 700;
+}
+
+.textType {
+    margin-top: 30px;
+}
+
+.typeTitle {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.textLevel {
+    margin-top: 30px;
+}
+
+.levelTitle {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.textComment {
+    margin-top: 30px;
+}
+
+.commentTitle {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.comment {
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.commentArea {
+    width: inherit;
+    padding: 20px 16px;
+    resize: none;
+    background-color: #EEF1F5;
+    border-radius: 12px;
+    height: 150px;
+}
+
+.btn {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnContinue {
+    width: 180px;
+    border-radius: 12px;
+      padding: 16px 33px 16px 33px;
+      background-color: #2684FC;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+     
+        transition: background-color .25s ease;
+      &:hover {
+        background-color: #63a2f4;
+      }
+}

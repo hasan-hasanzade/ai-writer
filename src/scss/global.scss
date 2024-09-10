@@ -201,6 +201,47 @@ body {
   }
 }
 
+// .bread-active {
+//   color: red;
+//   font-weight: 400;
+//   font-size: 14px;
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;       
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #22E0A7;   
+  border-radius: 20px;       
+  border: 3px solid #fff;  
+}
+
+.bread-container {
+  width: 100%;
+  margin-top: 200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.breadilist {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 
 // wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {

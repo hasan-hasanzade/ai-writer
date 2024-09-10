@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "../scss/global.scss";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import Breadcrumb from "@/components/BreadCrumb/BreadCrumb";
 
 const inter = Inter({ subsets: ["latin"],
   weight: ['400', '500', '700','800', '900'],
