@@ -1,5 +1,6 @@
 .reviews {
     padding-top: 100px;
+    position: relative;
 }
 
 .title {
@@ -9,6 +10,17 @@
     margin-bottom: 42px;
 }
 
+.body {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+}
+.icon {
+    flex-shrink: 0;
+    color: #2684FC;
+}
 
 .stars {
     display: flex;

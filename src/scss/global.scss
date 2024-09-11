@@ -42,6 +42,46 @@
   }
 }
 
+// Custom buttons for slider
+
+.custom-prev,
+.custom-next {
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &::after {
+    content: '';
+    display: none;
+  }
+}
+
+.custom-next {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+
+.custom-prev {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+
 
 body {
   font-weight: 400;
@@ -53,6 +93,10 @@ body {
     overflow: hidden;
     touch-action: none;
   }
+}
+
+.container {
+  position: relative;
 }
 
 // HeroBlock Sparks animation

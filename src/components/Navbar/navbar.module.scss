@@ -9,7 +9,7 @@
     width: 100%;
     z-index: 1000;
     transition: all 0.3s ease;
-  
+
     &::before {
         content: "";
         position: absolute;
@@ -21,11 +21,11 @@
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.25s ease;
-      }
-    
-      &.scrolled::before {
+    }
+
+    &.scrolled::before {
         opacity: 1;
-      }
+    }
 }
 
 .logo {
@@ -55,4 +55,29 @@
 
 .login {
     color: $secondaryText;
+}
+
+.dropdown {
+    position: relative;
+    z-index: 100; 
+    cursor: pointer;
+    .dropdownMenu {
+        position: absolute;
+        top: 270%;
+        left: 0;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 12px;
+        list-style: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 200;
+        display: none;
+
+        .dropdownItem {
+            padding: 8px 12px;
+        }
+        &.open {
+            display: block;
+          }
+    }      
 }

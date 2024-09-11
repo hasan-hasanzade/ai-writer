@@ -3,6 +3,8 @@
 import React from 'react'
 import styles from './review.module.scss'
 import StarIcon from '@public/star.svg'
+import NextIcon from '@public/next.svg'
+import PrevIcon from '@public/prev.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -15,77 +17,88 @@ const Reviews = () => {
       <div className="container">
         <div className={styles.body}>
             <h2 className={styles.title}>Reviews</h2>
-        <Swiper
-            modules={[Navigation]}
-            spaceBetween={50}
-            slidesPerView={3}
-            navigation={true}
-            >
-            <SwiperSlide>
-                <div className={styles.item}>
-                    <div className={styles.name}>John D.</div>
-                    <div className={styles.type}>Essay</div>
-                    <div className={styles.stars}>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
+        <div className={styles.slider}>
+            <Swiper
+                modules={[Navigation]}
+                spaceBetween={50}
+                slidesPerView={3}
+                navigation={{
+                    nextEl: '.custom-next',
+                    prevEl: '.custom-prev',
+                  }}
+                >
+                <SwiperSlide>
+                    <div className={styles.item}>
+                        <div className={styles.name}>John D.</div>
+                        <div className={styles.type}>Essay</div>
+                        <div className={styles.stars}>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                        </div>
+                        <div className={styles.review}>
+                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis officia beatae magni maxime? Sed, ut sunt cumque incidunt error minus, quas culpa doloribus earum eveniet quam dolorem nam! Rem nam corrupti numquam temporibus placeat similique accusantium error sequi atque odit! Quasi earum quidem officiis dolores impedit tempora, unde, facere, vitae corrupti libero laboriosam iure optio? Dolorum veritatis nulla rerum, consequatur aut quod nisi repellendus at earum voluptas commodi atque! Laborum suscipit placeat quidem, repudiandae incidunt qui iure voluptas rem. Inventore numquam eius ducimus necessitatibus!
+                        </div>
                     </div>
-                    <div className={styles.review}>
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis officia beatae magni maxime? Sed, ut sunt cumque incidunt error minus, quas culpa doloribus earum eveniet quam dolorem nam! Rem nam corrupti numquam temporibus placeat similique accusantium error sequi atque odit! Quasi earum quidem officiis dolores impedit tempora, unde, facere, vitae corrupti libero laboriosam iure optio? Dolorum veritatis nulla rerum, consequatur aut quod nisi repellendus at earum voluptas commodi atque! Laborum suscipit placeat quidem, repudiandae incidunt qui iure voluptas rem. Inventore numquam eius ducimus necessitatibus!
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={styles.item}>
+                        <div className={styles.name}>Ashley S.</div>
+                        <div className={styles.type}>Essay</div>
+                        <div className={styles.stars}>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                        </div>
+                        <div className={styles.review}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis officia beatae magni maxime? Sed, ut sunt cumque incidunt error minus, quas culpa doloribus earum eveniet quam dolorem nam! Rem nam corrupti numquam temporibus placeat similique accusantium error sequi atque odit! Quasi earum quidem officiis dolores impedit tempora, unde, facere, vitae corrupti libero laboriosam iure optio? Dolorum veritatis nulla rerum, consequatur aut quod nisi repellendus at earum voluptas commodi atque! Laborum suscipit placeat quidem, repudiandae incidunt qui iure voluptas rem. Inventore numquam eius ducimus necessitatibus!
+                        </div>
                     </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className={styles.item}>
-                    <div className={styles.name}>Ashley S.</div>
-                    <div className={styles.type}>Essay</div>
-                    <div className={styles.stars}>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={styles.item}>
+                        <div className={styles.name}>George L.</div>
+                        <div className={styles.type}>Abstract</div>
+                        <div className={styles.stars}>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                        </div>
+                        <div className={styles.review}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis officia beatae magni maxime? Sed, ut sunt cumque incidunt error minus, quas culpa doloribus earum eveniet quam dolorem nam! Rem nam corrupti numquam temporibus placeat similique accusantium error sequi atque odit! Quasi earum quidem officiis dolores impedit tempora, unde, facere, vitae corrupti libero laboriosam iure optio? Dolorum veritatis nulla rerum, consequatur aut quod nisi repellendus at earum voluptas commodi atque! Laborum suscipit placeat quidem, repudiandae incidunt qui iure voluptas rem. Inventore numquam eius ducimus necessitatibus!
+                        </div>
                     </div>
-                    <div className={styles.review}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis officia beatae magni maxime? Sed, ut sunt cumque incidunt error minus, quas culpa doloribus earum eveniet quam dolorem nam! Rem nam corrupti numquam temporibus placeat similique accusantium error sequi atque odit! Quasi earum quidem officiis dolores impedit tempora, unde, facere, vitae corrupti libero laboriosam iure optio? Dolorum veritatis nulla rerum, consequatur aut quod nisi repellendus at earum voluptas commodi atque! Laborum suscipit placeat quidem, repudiandae incidunt qui iure voluptas rem. Inventore numquam eius ducimus necessitatibus!
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={styles.item}>
+                        <div className={styles.name}>Luis R.</div>
+                        <div className={styles.type}>Presentation</div>
+                        <div className={styles.stars}>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                            <StarIcon className={styles.starIcon} width={19} height={17}/>
+                        </div>
+                        <div className={styles.review}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis officia beatae magni maxime? Sed, ut sunt cumque incidunt error minus, quas culpa doloribus earum eveniet quam dolorem nam! Rem nam corrupti numquam temporibus placeat similique accusantium error sequi atque odit! Quasi earum quidem officiis dolores impedit tempora, unde, facere, vitae corrupti libero laboriosam iure optio? Dolorum veritatis nulla rerum, consequatur aut quod nisi repellendus at earum voluptas commodi atque! Laborum suscipit placeat quidem, repudiandae incidunt qui iure voluptas rem. Inventore numquam eius ducimus necessitatibus!
+                        </div>
                     </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className={styles.item}>
-                    <div className={styles.name}>George L.</div>
-                    <div className={styles.type}>Abstract</div>
-                    <div className={styles.stars}>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                    </div>
-                    <div className={styles.review}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis officia beatae magni maxime? Sed, ut sunt cumque incidunt error minus, quas culpa doloribus earum eveniet quam dolorem nam! Rem nam corrupti numquam temporibus placeat similique accusantium error sequi atque odit! Quasi earum quidem officiis dolores impedit tempora, unde, facere, vitae corrupti libero laboriosam iure optio? Dolorum veritatis nulla rerum, consequatur aut quod nisi repellendus at earum voluptas commodi atque! Laborum suscipit placeat quidem, repudiandae incidunt qui iure voluptas rem. Inventore numquam eius ducimus necessitatibus!
-                    </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className={styles.item}>
-                    <div className={styles.name}>Luis R.</div>
-                    <div className={styles.type}>Presentation</div>
-                    <div className={styles.stars}>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                        <StarIcon className={styles.starIcon} width={19} height={17}/>
-                    </div>
-                    <div className={styles.review}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis officia beatae magni maxime? Sed, ut sunt cumque incidunt error minus, quas culpa doloribus earum eveniet quam dolorem nam! Rem nam corrupti numquam temporibus placeat similique accusantium error sequi atque odit! Quasi earum quidem officiis dolores impedit tempora, unde, facere, vitae corrupti libero laboriosam iure optio? Dolorum veritatis nulla rerum, consequatur aut quod nisi repellendus at earum voluptas commodi atque! Laborum suscipit placeat quidem, repudiandae incidunt qui iure voluptas rem. Inventore numquam eius ducimus necessitatibus!
-                    </div>
-                </div>
-            </SwiperSlide>
-        </Swiper>
+                </SwiperSlide>
+            </Swiper>
+            <div className="custom-prev">
+                <PrevIcon className={styles.icon} width={14} height={16}/>
+            </div>
+            <div className="custom-next">
+                <NextIcon className={styles.icon} width={14} height={16}/>
+            </div>
+        </div>
         </div>
       </div>
     </section>
