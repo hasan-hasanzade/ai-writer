@@ -13,10 +13,12 @@ const page = () => {
   }
 
   return (
-    <div className='container'>
-      <div className={styles.finished}>
-        <TextBlock/>
-        <OfferBlock showWhiteBox={false} grayBoxData={grayBoxData} />
+    <div className={styles.finishedEs}>
+      <div className='container'>
+        <div className={styles.finished}>
+          <TextBlock/>
+          <OfferBlock showWhiteBox={false} grayBoxData={grayBoxData} />
+        </div>
       </div>
     </div>
   )

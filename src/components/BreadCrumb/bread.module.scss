@@ -1,0 +1,29 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    a {
+        font-size: 14px;
+        color: #717172;
+        transition: all .3s ease;
+        &:hover {
+            color: #000;
+        }
+    }
+}
+
+.icon {
+    color: #717172;
+}

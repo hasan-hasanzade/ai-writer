@@ -19,11 +19,23 @@ const page = () => {
     buttonText: 'New Project'
   }
 
+  const breadcrumbs = [
+    { label: 'Main', link: '/' },
+    { label: 'Library', link: '/hub' },
+    { label: 'Projects', link: '/projects' }
+  ]
+
+
   return (
-    <div className='container'>
-      <div className={styles.short}>
-        <TextBlock/>
-        <OfferBlock showWhiteBox={true} grayBoxData={grayBoxData} whiteBoxData={whiteBoxData} />
+    <div className={styles.shortMain}>
+      <div className='container'>
+        <div className={styles.breadcrumbs}>
+          <Breadcrumb items={breadcrumbs} />
+        </div>
+        <div className={styles.short}>
+          <TextBlock/>
+          <OfferBlock showWhiteBox={true} grayBoxData={grayBoxData} whiteBoxData={whiteBoxData} />
+        </div>
       </div>
     </div>
   )

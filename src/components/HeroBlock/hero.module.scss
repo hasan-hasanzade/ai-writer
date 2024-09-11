@@ -2,7 +2,10 @@
 @import '../../scss/typhography';
 
 .hero {
-    padding: 150px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .textContent {
     text-align: center;

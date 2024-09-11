@@ -1,12 +1,6 @@
 .offer {
-    width: 340px;
-    padding: 150px 0;
-    position: fixed;
-    top: 0;
-    right: 300px;
-    @media (max-width: 1400px) {
-        right: 100px;
-    }
+    position: sticky!important;
+    position: -webkit-sticky!important;
 }
 
 .body {
@@ -14,12 +8,15 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    width: 340px;
+    padding: 30px 0;
 }
 
 .grayBox {
     background-color: #e2e8f0;
     border-radius: 21px;
     padding: 24px;
+    width: 100%;
 }
 
 .grayTitle {
@@ -43,9 +40,10 @@
 }
 
 .whiteBox {
-    background-color: #fff;
+    background-color: #e2e8f0;
     border-radius: 21px;
     padding: 24px;
+    width: 100%;
 }
 
 .whiteTitle {

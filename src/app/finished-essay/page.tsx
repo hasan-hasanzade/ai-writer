@@ -12,11 +12,22 @@ const page = () => {
     buttonText: 'New Project'
   }
 
+  const breadcrumbs = [
+    { label: 'Main', link: '/' },
+    { label: 'Library', link: '/hub' },
+    { label: 'Projects', link: '/projects' }
+  ]
+
   return (
-    <div className='container'>
-      <div className={styles.finished}>
-        <TextBlock/>
-        <OfferBlock showWhiteBox={false} grayBoxData={grayBoxData} />
+    <div className={styles.finishedEs}>
+      <div className='container'>
+        <div className={styles.breadcrumbs}>
+          <Breadcrumb items={breadcrumbs} />
+        </div>
+        <div className={styles.finished}>
+          <TextBlock/>
+          <OfferBlock showWhiteBox={false} grayBoxData={grayBoxData} />
+        </div>
       </div>
     </div>
   )

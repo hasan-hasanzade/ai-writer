@@ -2,10 +2,12 @@
 
 .aitutor {
     display: flex;
+    background-color: #fff;
 }
 
 .chatside {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
+    height: 100vh;
 }

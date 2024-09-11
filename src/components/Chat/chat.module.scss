@@ -5,20 +5,34 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    height: 500px;
+    height: 600px;
     overflow-y: scroll;
     padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.body {
+    width: 728px;
+    height: 100vh;
+
 }
 
 .incomingText {
-    background-color: #22E0A7;
+    width: 100%;
     // border: 1px solid #4B4F5B;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     border-radius: 18px;
     border-top-left-radius: 0px;
-    padding: 16px;
     width: 600px;
     @media (max-width: 1024px) {
         font-size: 14px;
@@ -33,8 +47,8 @@
 
 .sentText {
     text-align: left;
-    width: 600px;
-    background-color: #fff;
+    width: 66%;
+    background-color: #E9E9E9;
     border-radius: 18px;
     font-weight: 500;
     font-size: 16px;
@@ -60,14 +74,14 @@
 }
 
 .options {
+    margin-top: 12px;
     display: flex;
     width: 600px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 5px;
 }
 
 .option {
-    margin-top: 10px;
     padding: 10px;
     border-radius: 18px;
     background-color: #fff;
@@ -81,7 +95,6 @@
     flex-direction: column;
     margin: 20px 0px 0px 0px;
     padding: 0 11px;
-    height: 95px;
     border-radius: 18px;
     width: 100%;
     background-color: #fff;

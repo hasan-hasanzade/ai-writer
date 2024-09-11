@@ -63,11 +63,6 @@ const Chat = () => {
             <div className={styles.chatActions}>
                 <textarea className={styles.textArea} placeholder='Send a message (e.g., &quot;How do I...?&quot;)'>
                 </textarea>
-                <div className={styles.actions}>
-                    <ImgIcon />
-                    <MicrIcon />
-                    <SendIcon />
-                </div>
             </div>
       </div>
     </div>

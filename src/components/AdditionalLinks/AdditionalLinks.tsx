@@ -7,6 +7,7 @@ const AdditionalLinks = () => {
     <section className={styles.additional}>
       <div className="container">
         <div className={styles.body}>
+        <div className={styles.title}>Sample</div>
             <div className={styles.content}>
                 <Link href='#' className={styles.item}>
                     <div className={styles.text}>

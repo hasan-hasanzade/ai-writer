@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './hub.module.scss'
 import SearchIcon from '@public/search.svg'
-import ClearIcon from '@public/close.svg'
 import ArrRightIcon from '@public/arrowright.svg'
 import Link from 'next/link'
 
@@ -19,24 +18,23 @@ const page = () => {
                         placeholder="Please enter the topic..." 
                         className={styles.inputSearch}
                         />
-                    <ClearIcon className={styles.clearIcon} width={18} height={20}/>
                 </div>
           </div>
           <div className={styles.body}>
             <div className={styles.filters}>
                 <div className={styles.projects}>
-                    <Link href='/projects' className={styles.projectsLink}>Projects <ArrRightIcon className={styles.arrowIcon} width={22} height={16}/></Link>
-                    <div className={styles.projectsTitle}>Learning projects:</div>
+                    <Link href='/projects' className={styles.projectsLink}>Projects <ArrRightIcon className={styles.arrowIcon} width={12} height={16}/></Link>
+                    {/* <div className={styles.projectsTitle}>Learning projects:</div>
                     <ul className={styles.projectsList}>
                         <li className={styles.projectsItem}><Link className={styles.link} href='#'>Essay</Link></li>
                         <li className={styles.projectsItem}><Link className={styles.link} href='#'>Report</Link></li>
                         <li className={styles.projectsItem}><Link className={styles.link} href='#'>Presentation</Link></li>
                         <li className={styles.projectsItem}><Link className={styles.link} href='#'>Term Paper</Link></li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className={styles.tasks}>
-                <Link href='/projects' className={styles.tasksLink}>Tasks <ArrRightIcon className={styles.arrowIcon} width={22} height={16}/></Link>
-                    <div className={styles.tasksTitle}>Task bank:</div>
+                <Link href='/projects' className={styles.tasksLink}>Questions <ArrRightIcon className={styles.arrowIcon} width={12} height={16}/></Link>
+                    {/* <div className={styles.tasksTitle}>Task bank:</div>
                     <ul className={styles.tasksList}>
                         <li className={styles.tasksItem}><Link className={styles.link} href='#'>Mathematics</Link></li>
                         <li className={styles.tasksItem}><Link className={styles.link} href='#'>Physics</Link></li>
@@ -44,7 +42,7 @@ const page = () => {
                         <li className={styles.tasksItem}><Link className={styles.link} href='#'>Biology</Link></li>
                         <li className={styles.tasksItem}><Link className={styles.link} href='#'>Geography</Link></li>
                         <li className={styles.tasksItem}><Link className={styles.link} href='#'>History</Link></li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
             <div className={styles.content}>

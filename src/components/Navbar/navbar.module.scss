@@ -18,13 +18,9 @@
         right: 0;
         height: 1px;
         background-color: rgba(0, 16, 36, .12);
-        opacity: 0;
+        opacity: 1;
         pointer-events: none;
         transition: opacity 0.25s ease;
-    }
-
-    &.scrolled::before {
-        opacity: 1;
     }
 }
 

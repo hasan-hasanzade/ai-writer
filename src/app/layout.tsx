@@ -1,33 +1,31 @@
-import type { Metadata } from "next";
+'use client'
+import { usePathname } from "next/navigation";
 import { Inter } from "next/font/google";
-import "../scss/global.scss";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import Breadcrumb from "@/components/BreadCrumb/BreadCrumb";
+import "../scss/global.scss";
 
-const inter = Inter({ subsets: ["latin"],
-  weight: ['400', '500', '700','800', '900'],
-  display: 'swap', 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800", "900"],
+  display: "swap",
 });
-
-export const metadata: Metadata = {
-  title: "ИИ ассистент в учебе",
-  description: "Учись быстрее, учись лучше с ИИ ассистентом!",
-};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const pathname = usePathname();
+
+  const isExcludedPage = pathname === "/ai-tutor";
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-          <main className={'wrapper'}>
-            {children}
-          </main>
-        <Footer />
+        {!isExcludedPage && <Navbar />}
+        <main className={"wrapper"}>{children}</main>
+        {!isExcludedPage && <Footer />}
       </body>
     </html>
   );

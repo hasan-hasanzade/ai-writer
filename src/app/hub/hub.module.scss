@@ -60,9 +60,12 @@
 }
 
 .projectsLink {
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 35px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 
     &:hover {
         .arrowIcon {
@@ -72,10 +75,12 @@
 }
 
 .tasksLink {
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 35px;
-
+    display: flex;
+    align-items: center;
+    gap: 5px;
     &:hover {
         .arrowIcon {
             transform: translateX(5px);
@@ -174,19 +179,20 @@
   .infoWrapper {
     margin-top: 20px;
     display: flex;
+    align-items: center;
     gap: 10px;
+    font-size: 14px;
   }
 
   
 
   .date {
     color: #757575;
-    font-size: 14px;
   }
 
-  .tasks {
-    margin-top: 20px;
-  }
+//   .tasks {
+//     margin-top: 20px;
+//   }
 
   .showMore {
     display: flex;
