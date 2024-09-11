@@ -33,7 +33,7 @@
 }
 .subtitle {
     margin-top: 20px;
-    color: $secondaryText;
+    color: #000;
 }
 .searchContent {
     margin-top: 40px;
@@ -85,6 +85,7 @@
   z-index: 1;
   right: 16px;
   color: #757575;
+  cursor: pointer;
 }
 
 .searchBtn {

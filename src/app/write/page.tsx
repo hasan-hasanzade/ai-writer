@@ -9,7 +9,7 @@ import SiteMap from '@/components/SiteMap/SiteMap';
 const page = () => {
   return (
     <div>
-      <HeroBlock />
+      <HeroBlock isFocused={true} />
       <Advantages />
       <HowItWorks />
       <Reviews />
