@@ -1,2 +1,20 @@
 
 $fontFamily: var(--font-montserrat);
+
+$secondaryTitle: (
+  font-size: 30px,
+  font-weight: 700,
+  line-height: 35px
+);
+
+$blockTitle: (
+  font-size: 20px,
+  font-weight: 700,
+  line-height: 25px
+);
+
+$lightBlockTitle: (
+  font-size: 20px,
+  font-weight: 500,
+  line-height: 25px
+);

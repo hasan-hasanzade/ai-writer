@@ -15,7 +15,7 @@
   }
   
   .popupContent {
-    background: #F5F8FD;
+    background: #fff;
     padding: 40px;
     border-radius: 24px;
     width: 400px;
@@ -102,9 +102,12 @@
     position: relative;
     border: 1px solid transparent;
     transition: border-color .25s ease;
+    transition: background-color .25s ease;
     font-family: $fontFamily;
+    background-color: #ccc;
     &:focus {
         border: 1px solid #5a5a5a;
+        background-color: #fff;
     }
     &::placeholder {
         font-family: $fontFamily;

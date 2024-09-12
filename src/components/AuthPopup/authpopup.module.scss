@@ -15,7 +15,7 @@
   }
   
   .popupContent {
-    background: #F5F8FD;
+    background: #fff;
     padding: 40px;
     border-radius: 24px;
     width: 400px;
@@ -94,6 +94,7 @@
     margin-top: 50px;
     padding: 18px 10px;
     border-radius: 12px;
+    border: 1px solid #000;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -156,6 +157,7 @@
     margin-top: 20px;
     transition: border-color .3s ease;
     min-height: 56px;
+    background-color: #ccc;
     width: 100%;
     border-radius: 12px;
     padding-left: 16px;
@@ -163,9 +165,11 @@
     position: relative;
     border: 1px solid transparent;
     transition: border-color .25s ease;
+    transition: background-color .25s ease;
     font-family: $fontFamily;
     &:focus {
         border: 1px solid #5a5a5a;
+        background-color: #fff;
     }
     &::placeholder {
         font-family: $fontFamily;

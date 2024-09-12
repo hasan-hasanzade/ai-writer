@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className={styles.body}>
             <div className={styles.navWrap}>
               <div className={styles.logo}>
-                <Link href="/"><LogoIcon width={85} height={28} /></Link>
+                <Link href="/"><LogoIcon width={60} height={24} /></Link>
               </div>
               <nav className={styles.nav}>
                 <ul className={styles.menu}>

@@ -31,9 +31,6 @@ const ForgotPopup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
     }, 300);
   };
 
-  // Временно убираем проверку для отладки
-  // if (!isOpen && !isClosing) return null;
-
   return (
     <div 
       className={`${styles.popupOverlay} ${isClosing ? styles.popupOverlayClosing : ''}`} 
