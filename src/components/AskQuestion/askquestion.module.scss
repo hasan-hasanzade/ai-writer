@@ -1,9 +1,61 @@
 @import '../../scss/typhography';
-@import '../../scss/typhography';
+@import '../../scss/colors';
 
 .ask {
-    padding-bottom: 50px;
-    max-width: 728px;
+    width: 728px;
+    position: relative;
+}
+
+.body {
+    position: absolute;
+    left: 0;
+    bottom: 28px;
+    z-index: 1000;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 0;
+    width: 720px;
+    padding: 20px 0;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #fff 10%,
+        #fff 100%
+      );
+}
+
+.absolute {
+    position: absolute;
+    width: 720px;
+    padding: 20px 0;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #fff 10%,
+        #fff 100%
+      );
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #e2e8f0;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: all .25s ease;
+    &:hover {
+        background-color: #fff;
+        border: 1px solid #5a5a5a;
+    }
 }
 
 .title {
@@ -13,7 +65,7 @@
 }
 
 .askInput {
-    margin-top: 20px;
+
     transition: border-color .3s ease;
     min-height: 56px;
     background-color: #fff;

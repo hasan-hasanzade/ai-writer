@@ -1,15 +1,27 @@
+@import '../../scss/typhography';
+
+
 .offer {
-    position: sticky!important;
-    position: -webkit-sticky!important;
+    position: relative;
+    min-width: 340px;
 }
 
 .body {
+    // position: absolute;
+    // top: 0px;
+    // right: 0px;
+
+
+    padding: 30px 0;
+}
+
+.content {
+    position: fixed;
+    width: 340px;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    width: 340px;
-    padding: 30px 0;
 }
 
 .grayBox {
@@ -20,8 +32,9 @@
 }
 
 .grayTitle {
-    font-weight: 700;
-    font-size: 20px;
+    font-size: map-get($blockTitle, font-size);
+    font-weight: map-get($blockTitle, font-weight);
+    line-height: map-get($blockTitle, line-height);
 } 
 
 .graySubtitle {
@@ -47,8 +60,9 @@
 }
 
 .whiteTitle {
-    font-weight: 700;
-    font-size: 20px;
+    font-size: map-get($blockTitle, font-size);
+    font-weight: map-get($blockTitle, font-weight);
+    line-height: map-get($blockTitle, line-height);
 } 
 
 .whiteSubtitle {

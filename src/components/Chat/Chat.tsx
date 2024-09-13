@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from './chat.module.scss'
-import SendIcon from '@public/send.svg'
-import MicrIcon from '@public/microphone.svg'
-import ImgIcon from '@public/img.svg'
+import ArrowIcon from '@public/next.svg';
 
 
 const Chat = () => {
@@ -61,8 +59,12 @@ const Chat = () => {
                 </div>
             </div>
             <div className={styles.chatActions}>
-                <textarea className={styles.textArea} placeholder='Send a message (e.g., &quot;How do I...?&quot;)'>
-                </textarea>
+              <input
+                  className={styles.chatInput}
+                  type="text"
+                  placeholder="Write me and I'll help you figure it out!"
+                />
+                <button className={styles.btn}><ArrowIcon /></button>
             </div>
       </div>
     </div>

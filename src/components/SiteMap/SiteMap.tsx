@@ -8,7 +8,7 @@ const SiteMap = () => {
       <div className="container">
         <div className={styles.body}>
             <div className={styles.item}>
-                <div className={styles.heading}>AI Writer</div>
+                <Link href='/tutor' className={styles.heading}>AI Tutor</Link>
                 <div className={styles.links}>
                     <Link className={styles.link} href='#'>Abstract</Link>
                     <Link className={styles.link} href='#'>Essay</Link>
@@ -21,7 +21,7 @@ const SiteMap = () => {
                 </div>
             </div>
             <div className={styles.item}>
-                <div className={styles.heading}>Task Solving</div>
+                <Link href='/homework' className={styles.heading}>Homework Helper</Link>
                 <div className={styles.links}>
                     <Link className={styles.link} href='#'>Mathematics</Link>
                     <Link className={styles.link} href='#'>Algebra</Link>
@@ -38,10 +38,30 @@ const SiteMap = () => {
                 </div>
             </div>
             <div className={styles.item}>
-                <div className={styles.heading}>Library</div>
+                <Link href='/write' className={styles.heading}>Writing Companion</Link>
                 <div className={styles.links}>
-                    <Link className={styles.link} href='#'>Projects</Link>
-                    <Link className={styles.link} href='#'>Tasks</Link>
+                <Link className={styles.link} href='/essay'>Essay</Link>
+                    <Link className={styles.link} href='/term-paper'>Term Paper</Link>
+                    <Link className={styles.link} href='/book-report'>Project Report</Link>
+                    <Link className={styles.link} href='/presentation'>Presentation </Link>
+                    <Link className={styles.link} href='/research-paper'>Research Paper</Link>
+                    <Link className={styles.link} href='/academic-paper'>Review</Link>
+                    <Link className={styles.link} href='/article'>Article</Link>
+                    <Link className={styles.link} href='/coursework'>Coursework</Link>
+                </div>
+            </div>
+            <div className={styles.item}>
+                <div className={styles.heading}>Text Tools</div>
+                <div className={styles.links}>
+                    <Link className={styles.link} href='/rewrite'>Rewrite</Link>
+                    <Link className={styles.link} href='/summarize'>Summarize</Link>    
+                </div>
+            </div>
+            <div className={styles.item}>
+                <Link href='/library' className={styles.heading}>Library</Link>
+                <div className={styles.links}>
+                    <Link className={styles.link} href='/library/projects'>Projects</Link>
+                    <Link className={styles.link} href='/library/questions'>Questions</Link>    
                 </div>
             </div>
         </div>

@@ -12,6 +12,14 @@ import 'swiper/css/navigation';
 
 
 const Reviews = () => {
+    const [isBeginning, setIsBeginning] = React.useState(true);
+    const [isEnd, setIsEnd] = React.useState(false);
+
+    const handleSlideChange = (swiper:any) => {
+        setIsBeginning(swiper.isBeginning);
+        setIsEnd(swiper.isEnd);
+      };
+
   return (
     <section className={styles.reviews}>
       <div className="container">
@@ -26,6 +34,9 @@ const Reviews = () => {
                     nextEl: '.custom-next',
                     prevEl: '.custom-prev',
                   }}
+                onReachEnd={() => setIsEnd(true)}
+                onSlideChange={handleSlideChange}
+              onInit={handleSlideChange}
                 >
                 <SwiperSlide>
                     <div className={styles.item}>
@@ -92,11 +103,11 @@ const Reviews = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
-            <div className="custom-prev">
-                <PrevIcon className={styles.icon} width={14} height={16}/>
+            <div className={`custom-prev ${isBeginning ? styles.disabled : ''}`}>
+              <PrevIcon className={styles.icon} width={14} height={16} />
             </div>
-            <div className="custom-next">
-                <NextIcon className={styles.icon} width={14} height={16}/>
+            <div className={`custom-next ${isEnd ? styles.disabled : ''}`}>
+              <NextIcon className={styles.icon} width={14} height={16} />
             </div>
         </div>
         </div>

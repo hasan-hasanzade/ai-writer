@@ -11,7 +11,7 @@ const Footer = () => {
             <div className={styles.logo}><LogoWhite width={60} height={24} /></div>
             <div className={styles.content}>
                 <div className={styles.questions}>
-                    For all inquiries, please contact example@info.ru.
+                    For all inquiries, please contact info@qvalo.com
                 </div>
                 <div className={styles.links}>
                     <Link className={styles.link} href='#'>Terms of Service</Link>

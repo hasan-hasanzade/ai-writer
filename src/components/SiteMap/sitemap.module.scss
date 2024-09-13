@@ -12,8 +12,9 @@
 }
 
 .heading {
-    font-weight: 700;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #000000cc;
 }
 
 .links {
@@ -24,8 +25,9 @@
 }
 
 .link {
-    font-size: 14px;
-    color: #ccc;
+    font-size: 13px;
+    font-weight: 300;
+    color: #0000008a;
     transition: all .3s ease;
     &:hover {
         color: #000;

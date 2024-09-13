@@ -28,6 +28,11 @@
     margin-top: 10px;
 }
 
+.disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+
 .starIcon {
     color: #ffdd2d;
 }

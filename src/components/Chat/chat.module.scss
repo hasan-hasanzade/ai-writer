@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height:97vh;
 }
 
 .body {
@@ -25,9 +25,15 @@
 
 }
 
+.incomingMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
 .incomingText {
     width: 100%;
-    // border: 1px solid #4B4F5B;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
@@ -90,35 +96,71 @@
     
 }
 
+// .chatActions {
+//     display: flex;
+//     flex-direction: column;
+//     margin: 20px 0px 0px 0px;
+//     padding: 0 11px;
+//     border-radius: 18px;
+//     width: 100%;
+//     background-color: #fff;
+// }
+
+
+// .actions {
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: flex-end;
+//     width: 100%;
+//     background-color: #fff;
+//     height: 100%;
+//     height: 50px;
+// }
+
+
 .chatActions {
+    margin: 20px 0;
     display: flex;
-    flex-direction: column;
-    margin: 20px 0px 0px 0px;
-    padding: 0 11px;
-    border-radius: 18px;
-    width: 100%;
-    background-color: #fff;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.btn {
+    background-color: #e2e8f0;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: all .25s ease;
+    &:hover {
+        background-color: #fff;
+        border: 1px solid #5a5a5a;
+    }
 }
 
 
-.actions {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 100%;
-    background-color: #fff;
-    height: 100%;
-    height: 50px;
-}
+.chatInput {
 
-
-.textArea {
-    padding: 5px;
+    transition: border-color .3s ease;
+    min-height: 56px;
     background-color: #fff;
-    color: #000;
-    resize: none;
-    width: 100%;
+    width: 91%;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    border: 1px solid transparent;
+    transition: border-color .25s ease;
+    transition: background-color .25s ease;
+    font-family: $fontFamily;
+    background-color: #e2e8f0;
+    &:focus {
+        border: 1px solid #5a5a5a;
+        background-color: #fff;
+    }
     &::placeholder {
         font-family: $fontFamily;
     }
+    font-size: 15px;
 }
