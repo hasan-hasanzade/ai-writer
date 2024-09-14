@@ -245,6 +245,59 @@ body {
   }
 }
 
+// MyProjects tabs
+
+
+.react-tabs__tab-panel {
+  display: none;
+  margin-top: 40px;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.react-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+  }
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.react-tabs__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 7px!important;
+  width: 120px;
+  text-align: center;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #5a5a5a;
+  cursor: pointer;
+  transition: all .4s ease;
+  &:hover {
+    border: 1px solid transparent;
+  }
+}
+
+.react-tabs__tab--selected {
+  background-color: $secondaryText;
+  border: 1px solid transparent;
+}
+
+
+
 html {
   scroll-behavior: smooth;
 }

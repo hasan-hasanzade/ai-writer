@@ -54,6 +54,9 @@ const HeroBlock: React.FC<HeroBlockProps> = ({ isFocused = false }) => {
                 ref={inputRef}
               />
             </div>
+            <div className={styles.uploadBar}>
+              
+            </div>
             <div className={styles.searchBtn}>
               <svg className="styles_active__YRO07" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24" fill="#000">
                   <path d="M13.5027,9.50272l1.5426-3.85633c.3447-.86185,1.5647-.86186,1.9094,0l1.5426,3.85633l3.8563,1.54258c.8619.3447.8619,1.5647,0,1.9094l-3.8563,1.5426-1.5426,3.8563c-.3447.8619-1.5647.8619-1.9094,0l-1.5426-3.8563-3.85631-1.5426c-.86185-.3447-.86186-1.5647,0-1.9094L13.5027,9.50272Z"></path>

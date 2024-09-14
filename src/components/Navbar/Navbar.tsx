@@ -4,13 +4,16 @@ import styles from './navbar.module.scss';
 import Link from 'next/link';
 import AuthPopup from '../AuthPopup/AuthPopup';
 import LogoIcon from '@public/logo.svg';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLLIElement | null>(null);
+  const profileDropdownRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,18 +37,36 @@ const Navbar = () => {
         setIsDropdownOpen(false);
       }
     };
-  
+
     if (isDropdownOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
     }
-  
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isDropdownOpen]);
-  
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (profileDropdownRef.current && !profileDropdownRef.current.contains(event.target as Node)) {
+        setIsProfileDropdownOpen(false);
+      }
+    };
+
+    if (isProfileDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isProfileDropdownOpen]);
+
   const handleLoginClick = () => {
     setIsPopupOpen(true);
   };
@@ -56,6 +77,10 @@ const Navbar = () => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
+  };
+
+  const toggleProfileDropdown = () => {
+    setIsProfileDropdownOpen((prev) => !prev);
   };
 
   return (
@@ -76,7 +101,7 @@ const Navbar = () => {
                     <Link className={styles.navLink} href="/write">Write</Link>
                   </li>
                   <li className={styles.item}>
-                    <Link className={styles.navLink} href="/solve">Solve homework</Link>
+                    <Link className={styles.navLink} href="/homework">Solve homework</Link>
                   </li>
                   <li className={`${styles.item} ${styles.dropdown}`} ref={dropdownRef}>
                     <span className={styles.navLink} onClick={toggleDropdown}>
@@ -94,8 +119,17 @@ const Navbar = () => {
                 </ul>
               </nav>
             </div>
-            <div className={styles.login}>
-              <a href="#" onClick={handleLoginClick}>Log in</a>
+            <div className={styles.profileDropdown} onClick={toggleProfileDropdown} ref={profileDropdownRef}>
+              <div className={styles.profileName}>Ivan</div>
+              <div className={styles.profileImg}><Image src='/user.svg' width={25} height={25} alt='user' /></div>
+              <ul className={`${styles.dropdownMenu} ${isProfileDropdownOpen ? styles.open : ''}`}>
+                <li className={styles.dropdownItem}>
+                  <Link href="/projects">My projects</Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <div>Log out</div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

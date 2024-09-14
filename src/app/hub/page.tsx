@@ -1,146 +1,70 @@
+'use client'
+
 import React from 'react'
 import styles from './hub.module.scss'
 import SearchIcon from '@public/search.svg'
 import ArrRightIcon from '@public/arrowright.svg'
 import Link from 'next/link'
 
+const truncateTitle = (title: string, maxLength: number) => {
+  if (title.length > maxLength) {
+    return title.substring(0, maxLength).trim() + '...';
+  }
+  return title;
+};
+
 const page = () => {
   return (
-    <div className={styles.hub}>
+    <section className={styles.hub}>
       <div className='container'>
-          <h2 className={styles.title}>All materials</h2>
-          <h4 className={styles.subtitle}>Look for the right training materials</h4>
-          <div className={styles.searchBody}>
-              <div className={styles.inputWrapper}>
-                    <SearchIcon className={styles.searchIcon} width={28} height={20}/>  
-                        <input 
-                        id="login"
-                        placeholder="Please enter the topic..." 
-                        className={styles.inputSearch}
-                        />
-                </div>
+          <h1 className={styles.title}>All materials</h1>
+          <p className={styles.subtitle}>Look for the right training materials</p>
+        <div className={styles.searchBody}>
+          <div className={styles.inputWrapper}>
+            <SearchIcon className={styles.searchIcon} width={28} height={20}/>  
+            <input 
+              id="search"
+              placeholder="Please enter the topic..." 
+              className={styles.inputSearch}
+              aria-label="Search training materials"
+            />
           </div>
-          <div className={styles.body}>
-            <div className={styles.filters}>
-                <div className={styles.projects}>
-                    <Link href='/projects' className={styles.projectsLink}>Projects <ArrRightIcon className={styles.arrowIcon} width={12} height={16}/></Link>
-                    {/* <div className={styles.projectsTitle}>Learning projects:</div>
-                    <ul className={styles.projectsList}>
-                        <li className={styles.projectsItem}><Link className={styles.link} href='#'>Essay</Link></li>
-                        <li className={styles.projectsItem}><Link className={styles.link} href='#'>Report</Link></li>
-                        <li className={styles.projectsItem}><Link className={styles.link} href='#'>Presentation</Link></li>
-                        <li className={styles.projectsItem}><Link className={styles.link} href='#'>Term Paper</Link></li>
-                    </ul> */}
-                </div>
-                <div className={styles.tasks}>
-                <Link href='/projects' className={styles.tasksLink}>Questions <ArrRightIcon className={styles.arrowIcon} width={12} height={16}/></Link>
-                    {/* <div className={styles.tasksTitle}>Task bank:</div>
-                    <ul className={styles.tasksList}>
-                        <li className={styles.tasksItem}><Link className={styles.link} href='#'>Mathematics</Link></li>
-                        <li className={styles.tasksItem}><Link className={styles.link} href='#'>Physics</Link></li>
-                        <li className={styles.tasksItem}><Link className={styles.link} href='#'>Chemistry</Link></li>
-                        <li className={styles.tasksItem}><Link className={styles.link} href='#'>Biology</Link></li>
-                        <li className={styles.tasksItem}><Link className={styles.link} href='#'>Geography</Link></li>
-                        <li className={styles.tasksItem}><Link className={styles.link} href='#'>History</Link></li>
-                    </ul> */}
-                </div>
+        </div>
+
+        <div className={styles.body}>
+          <nav className={styles.filters} aria-label="Filter by category">
+            <div className={styles.projects}>
+              <Link href='/projects' className={styles.projectsLink}>
+                Projects <ArrRightIcon className={styles.arrowIcon} width={12} height={16}/>
+              </Link>
             </div>
-            <div className={styles.content}>
-                <div className={styles.cartWrapper}>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                    <div className={styles.cart}>
-                        <h4 className={styles.cartTitle}>The sun sets behind the mountains, painting the sky with vibrant hues of orangess.</h4>
-                        <div className={styles.infoWrapper}>
-                            <div className={styles.type}>Project</div>
-                            •
-                            <div className={styles.date}>10 September</div>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.showMore}>Show More</div>
+            <div className={styles.tasks}>
+              <Link href='/projects' className={styles.tasksLink}>
+                Questions <ArrRightIcon className={styles.arrowIcon} width={12} height={16}/>
+              </Link>
             </div>
+          </nav>
+
+          <div className={styles.content}>
+            <div className={styles.cartWrapper}>
+              {Array(10).fill(0).map((_, index) => (
+                <article className={styles.cart} key={index}>
+                  <h2 className={styles.cartTitle}>
+                    {truncateTitle('The sun sets behind the mountains, painting the sky with vibrant hues of oranges.', 80)}
+                  </h2>
+                  <div className={styles.infoWrapper}>
+                    <span className={styles.type}>Project</span>
+                    <span>•</span>
+                    <time className={styles.date} dateTime="2023-09-10">10 September</time>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <button className={styles.showMore}>Show More</button>
           </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

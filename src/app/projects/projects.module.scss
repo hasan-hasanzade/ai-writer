@@ -1,0 +1,60 @@
+.myProjects {
+    padding: 100px 0;
+}
+
+.projectsContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 7px!important;
+    width: 120px;
+    text-align: center;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid #5a5a5a;
+    cursor: pointer;
+    transition: all .4s ease;
+    &:hover {
+      border: 1px solid transparent;
+    }
+}
+
+.item {
+    background-color: #fff;
+    padding: 28px 32px;
+    border-radius: 24px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.text {
+    margin-top: 20px;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.date {
+    margin-top: 20px;
+    color: #757575;
+    font-size: 14px;
+}
