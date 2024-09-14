@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
 
-  const isExcludedPage = pathname === "/ai-tutor";
+  const isExcludedPage = pathname === "/ai-dashboard";
 
   return (
     <html lang="en">

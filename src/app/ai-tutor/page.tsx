@@ -1,18 +1,21 @@
 import React from 'react'
-import ChatSideBar from '@/components/ChatSideBar/ChatSideBar'
-import ChatFilters from '@/components/ChatFilters/ChatFilters'
-import styles from './aitutor.module.scss'
-import Chat from '@/components/Chat/Chat'
+import HeroBlock from '@/components/HeroBlock/HeroBlock';
+import Advantages from '@/components/Advantages/Advantages';
+import HowItWorks from "@/components/HowItWorks/HowItWorks";
+import Reviews from "@/components/Reviews/Reviews";
+import FAQ from '@/components/FAQ/FAQ';
+import SiteMap from '@/components/SiteMap/SiteMap';
 
 const page = () => {
   return (
-    <div className={styles.aitutor}>
-      <ChatSideBar />
-      <div className={styles.chatside}>
-        <ChatFilters />
-        <Chat />
-      </div>
-    </div>
+    <>
+      <HeroBlock isFocused={true} isUploaded={false} isSearched={false}/>
+      <Advantages />
+      <HowItWorks />
+      <Reviews />
+      <FAQ />
+      <SiteMap />
+    </>
   )
 }
 

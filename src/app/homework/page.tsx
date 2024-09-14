@@ -8,14 +8,14 @@ import SiteMap from '@/components/SiteMap/SiteMap';
 
 const page = () => {
   return (
-    <div>
-      <HeroBlock isFocused={true} />
+    <>
+      <HeroBlock isFocused={true} isUploaded={true} isSearched={true}/>
       <Advantages />
       <HowItWorks />
       <Reviews />
       <FAQ />
       <SiteMap />
-    </div>
+    </>
   )
 }
 

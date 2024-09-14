@@ -10,14 +10,55 @@
 }
 
 .title {
-    font-size: 45px;
-    text-align: center;
-    font-weight: 900;
-  }
+  font-size: 35px;
+  text-align: left;
+  font-weight: 900;
+}
 
-.subtitle {
-    font-size: 15px;
-    text-align: center;
-    font-weight: 400;
-    margin-top: 25px;
-  }
+.heading {
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkHead {
+  font-size: 20px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.link {
+  font-size: 20px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.linkHead,
+.link,
+.heading {
+  position: relative;
+}
+
+.svgIcon {
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}

@@ -95,7 +95,7 @@ const Navbar = () => {
               <nav className={styles.nav}>
                 <ul className={styles.menu}>
                  <li className={styles.item}>
-                    <Link className={styles.navLink} href="/ai-tutor">AI Tutor</Link>
+                    <Link className={styles.navLink} href="/ai-dashboard">AI Tutor</Link>
                   </li>
                   <li className={styles.item}>
                     <Link className={styles.navLink} href="/write">Write</Link>

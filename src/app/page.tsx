@@ -10,7 +10,7 @@ import About from "@/components/About/About";
 export default function Home() {
   return (
     <>
-      <HeroBlock />
+      <HeroBlock isSearched={true}/>
       <AdditionalLinks />
       <About />
       <Advantages />

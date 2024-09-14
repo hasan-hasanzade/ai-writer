@@ -114,4 +114,55 @@
       }
   }
 
- 
+  .uploadHover {
+    transition: all .25s ease;
+    padding: 0 5px;
+  }
+
+.uploadBar {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  width: 624px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 33px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color .25s ease;
+  &:hover {
+    border: 1px solid #5a5a5a;
+    .uploadHover {
+      color: #2684FC;
+      text-decoration: underline;
+    }
+  }
+}
+
+.uploadBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.uploadText {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.keyboard {
+  font-size: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
