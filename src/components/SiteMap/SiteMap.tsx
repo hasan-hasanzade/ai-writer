@@ -1,6 +1,8 @@
+
 import React from 'react'
 import styles from './sitemap.module.scss'
 import Link from 'next/link'
+import Accordion from '../Accordion/Accordion'
 
 const SiteMap = () => {
   return (
@@ -40,7 +42,7 @@ const SiteMap = () => {
             <div className={styles.item}>
                 <Link href='/write' className={styles.heading}>Writing Companion</Link>
                 <div className={styles.links}>
-                <Link className={styles.link} href='/essay'>Essay</Link>
+                    <Link className={styles.link} href='/essay'>Essay</Link>
                     <Link className={styles.link} href='/term-paper'>Term Paper</Link>
                     <Link className={styles.link} href='/book-report'>Project Report</Link>
                     <Link className={styles.link} href='/presentation'>Presentation </Link>
@@ -64,6 +66,78 @@ const SiteMap = () => {
                     <Link className={styles.link} href='/library/questions'>Questions</Link>    
                 </div>
             </div>
+        </div>
+        <div className={styles.accordionBody}>
+        <h2 className={styles.title}>Sitemap</h2>
+        <div className={styles.wrap}>
+            <Accordion 
+                question='AI Tutor' 
+                answer={(
+                    <div className={styles.links}>
+                        <Link className={styles.link} href='#'>Abstract</Link>
+                        <Link className={styles.link} href='#'>Essay</Link>
+                        <Link className={styles.link} href='#'>Term Paper</Link>
+                        <Link className={styles.link} href='#'>Report</Link>
+                        <Link className={styles.link} href='#'>Thesis</Link>
+                        <Link className={styles.link} href='#'>Presentation</Link>
+                        <Link className={styles.link} href='#'>Project</Link>
+                        <Link className={styles.link} href='#'>Article</Link>
+                    </div>
+                )}
+            />
+            <Accordion 
+                question='Homework Helper'
+                answer={(
+                    <div className={styles.links}>
+                        <Link className={styles.link} href='#'>Mathematics</Link>
+                        <Link className={styles.link} href='#'>Algebra</Link>
+                        <Link className={styles.link} href='#'>Computer Science</Link>
+                        <Link className={styles.link} href='#'>Physics</Link>
+                        <Link className={styles.link} href='#'>Chemistry</Link>
+                        <Link className={styles.link} href='#'>Biology</Link>
+                        <Link className={styles.link} href='#'>Geography</Link>
+                        <Link className={styles.link} href='#'>Russian Language</Link>
+                        <Link className={styles.link} href='#'>Literature</Link>
+                        <Link className={styles.link} href='#'>History</Link>
+                        <Link className={styles.link} href='#'>Social Studies</Link>
+                        <Link className={styles.link} href='#'>English Language</Link>
+                    </div>
+                )}
+            />
+            <Accordion 
+                question='Writing Companion'
+                answer={(
+                    <div className={styles.links}>
+                        <Link className={styles.link} href='/essay'>Essay</Link>
+                        <Link className={styles.link} href='/term-paper'>Term Paper</Link>
+                        <Link className={styles.link} href='/book-report'>Project Report</Link>
+                        <Link className={styles.link} href='/presentation'>Presentation </Link>
+                        <Link className={styles.link} href='/research-paper'>Research Paper</Link>
+                        <Link className={styles.link} href='/academic-paper'>Review</Link>
+                        <Link className={styles.link} href='/article'>Article</Link>
+                        <Link className={styles.link} href='/coursework'>Coursework</Link>
+                    </div>
+                )}
+            />
+            <Accordion 
+                question='Text Tools'
+                answer={(
+                    <div className={styles.links}>
+                        <Link className={styles.link} href='/rewrite'>Rewrite</Link>
+                        <Link className={styles.link} href='/summarize'>Summarize</Link>    
+                    </div>
+                )}
+            />
+            <Accordion 
+                question='Library'
+                answer={(
+                    <div className={styles.links}>
+                        <Link className={styles.link} href='/library/projects'>Projects</Link>
+                        <Link className={styles.link} href='/library/questions'>Questions</Link>    
+                    </div>
+                )}
+            />
+        </div>
         </div>
       </div>
     </section>

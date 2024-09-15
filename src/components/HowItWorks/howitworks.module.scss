@@ -1,17 +1,28 @@
+@import '../../scss/breakpoints';
+
 .how {
     padding-top: 100px;
+    @media (max-width: $mobile) {
+        padding-top: 50px;
+      }
 }
 
 .title {
     font-size: 45px;
     text-align: center;
     font-weight: 900;
+    @media (max-width: $mobile) {
+        font-size: 30px;
+      }
 }
 
 .content {
     display: flex;
     gap: 40px;
     margin-top: 75px;
+    @media (max-width: $mobile) {
+        flex-wrap: wrap;
+      }
 }
 
 .item {
@@ -23,6 +34,15 @@
     align-items: center;
     flex-direction: column;
     align-items: center;
+    @media (max-width: $mobile) {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+        margin-left: 15px;
+        gap: 10px;
+    }
 }
 
 .number {
@@ -37,10 +57,19 @@
     text-align: center;
     color: #fff;
     margin-top: -85px;
+    @media (max-width: $mobile) {
+        margin-top: -20px;
+        margin-left: -30px;
+        flex-shrink: 0;
+    }
 }
 
 .text {
     margin-top: 40px;
     line-height: 30px;
     text-align: center;
+    @media (max-width: $mobile) {
+        margin-top: 0;
+        text-align: left;
+    }
 }

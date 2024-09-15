@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useRef, useEffect, useState } from 'react';
 import styles from './accordion.module.scss';
@@ -6,7 +6,7 @@ import ArrDownIcon from '@public/arrdown.svg';
 
 interface AccordionProps {
   question: string;
-  answer: string;
+  answer: React.ReactNode; // Теперь можно передавать любой JSX
 }
 
 const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {

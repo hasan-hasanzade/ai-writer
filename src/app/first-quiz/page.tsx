@@ -244,7 +244,6 @@ const page = () => {
               <Link className={styles.btnContinue} href="/second-quiz">Continue</Link>
             </div>
           </div>
-
           <ProgressBar progress={progress} />
         </div>
       </div>

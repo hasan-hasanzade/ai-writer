@@ -1,3 +1,5 @@
+@import '../../scss/breakpoints';
+
 .additinal {
     padding-top: 100px;
 }
@@ -6,6 +8,9 @@
     font-size: 45px;
     text-align: center;
     font-weight: 900;
+    @media (max-width: $mobile) {
+        font-size: 30px;
+      }
 }
 
 .content {
@@ -15,6 +20,7 @@
     flex-wrap: wrap;
     gap: 42px;
     margin-top: 48px;
+    
 }
 
 .item {
@@ -40,6 +46,20 @@
     }
     &:hover {
         scale: 1.02;
+    }
+    @media (max-width: $tablet) {
+        width: 100%;
+        height: 300px;
+        &:last-child {
+            width: 100%;
+            order: 1;
+            height: 300px;
+            order: 3;
+            align-items: center;
+            .text {
+                text-align: center;
+            }
+        }
     }
 }
 

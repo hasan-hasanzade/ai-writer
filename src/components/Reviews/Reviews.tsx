@@ -29,7 +29,21 @@ const Reviews = () => {
             <Swiper
                 modules={[Navigation]}
                 spaceBetween={50}
-                slidesPerView={3}
+                slidesPerView={3}// Default value for mobile
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                568: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+                992: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+              }}
                 navigation={{
                     nextEl: '.custom-next',
                     prevEl: '.custom-prev',

@@ -1,12 +1,20 @@
+@import '../../scss/colors';
+
 .secQuiz {
-    padding: 150px 0;
+  padding: 150px 0;
 }
 
 .body {
-    background-color: #fff;
-    border-radius: 24px;
-    box-shadow: 0 12px 12px rgba(0, 0, 0, .1), 0 12px 12px rgb(0 0 0 / 4%), 0 12px 20px rgb(0 0 0 / 4%), 0 6px 5px rgb(0 0 0 / 4%), inset 0 5px 0 #3e4757;
-    padding: 64px 140px;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, .1), 0 12px 12px rgb(0 0 0 / 4%), 0 12px 20px rgb(0 0 0 / 4%), 0 6px 5px rgb(0 0 0 / 4%), inset 0 5px 0 #3e4757;
+  padding: 64px 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quizBody {
+  width: 522px;
 }
 
 .title {
@@ -16,7 +24,7 @@
 }
 
 .heading {
-  margin-top: 30px;
+  margin-top: 60px;
   font-size: 30px;
   text-align: left;
   font-weight: 700;
@@ -53,7 +61,7 @@
   position: relative;
 }
 
-.svgIcon {
+.sparkIcon {
   position: absolute;
   left: -35px;
   top: 50%;
@@ -61,4 +69,78 @@
   width: 24px;
   height: 24px;
   display: inline-block;
+  cursor: pointer;
+}
+
+.popup {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+}
+
+.popupContent {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.regenerateBtn {
+  padding: 5px 20px;
+  background-color: $secondaryText;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.prevBtn,.nextBtn {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
+.addBtn {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.deleteBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnContinue {
+  width: 180px;
+  border-radius: 12px;
+    padding: 16px 33px 16px 33px;
+    background-color: #2684FC;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+   
+      transition: background-color .25s ease;
+    &:hover {
+      background-color: #63a2f4;
+    }
+}
+
+.deleteIcon {
+  fill: #000;
+  stroke: #fff;
 }

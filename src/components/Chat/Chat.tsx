@@ -7,7 +7,7 @@ const Chat = () => {
   return (
     <div className={styles.chat}>
       <div className={styles.body}>
-      <div className={styles.chatBody}>
+            <div className={styles.chatBody}>
                 <div className={styles.incomingMessage}>
                   <div className={styles.incomingText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent 
                     imperdiet nibh non quam dignissim convallis. Vestibulum gravida in tortor sit amet ullamcorper. Suspendisse potenti. 

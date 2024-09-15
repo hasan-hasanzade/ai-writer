@@ -1,4 +1,5 @@
 @import '../../scss/colors.scss';
+@import '../../scss/breakpoints';
 
 .accordion {
   background-color: #fff;
@@ -32,6 +33,9 @@
   .icon {
     transition: transform 0.3s ease-in-out;
     color: #caccd0;
+    @media (max-width: $mobile) {
+      flex-shrink: 0;
+    }
   }
 
   .iconOpen {
@@ -54,5 +58,9 @@
 
   .answer {
     padding: 10px 20px 20px 20px;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      padding:0 12px 12px 12px;
+    }
   }
 }

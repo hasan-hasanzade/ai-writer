@@ -11,9 +11,10 @@ interface HeroBlockProps {
   isFocused?: boolean;
   isUploaded?: boolean;
   isSearched?: boolean;
+  isTutor?: boolean;
 }
 
-const HeroBlock: React.FC<HeroBlockProps> = ({ isFocused = false, isUploaded = false,  isSearched = false}) => {
+const HeroBlock: React.FC<HeroBlockProps> = ({ isFocused = false, isUploaded = false,  isSearched = false, isTutor = false}) => {
   const [index, setIndex] = useState(0);
   const [inputValue, setInputValue] = useState('');
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
@@ -93,7 +94,7 @@ const HeroBlock: React.FC<HeroBlockProps> = ({ isFocused = false, isUploaded = f
                   onChange={(e) => setInputValue(e.target.value)}
                   ref={inputRef}
                 />
-              </div> : ''
+              </div> : null
             }
             {isUploaded ? (
               <label
@@ -125,6 +126,40 @@ const HeroBlock: React.FC<HeroBlockProps> = ({ isFocused = false, isUploaded = f
                 </div>
               </label>
             ) : null}
+              {
+                isTutor ?    <div className={styles.subjects}>
+                <div className={styles.subjectBody}>
+                  <div className={styles.item}>
+                    <div className={styles.name}>Mathematics</div>
+                  </div>
+                  <div className={styles.item}>
+                    <div className={styles.name}>Biology</div>
+                  </div>
+                  
+                  <div className={styles.item}>
+                    <div className={styles.name}>Geography</div>
+                  </div>
+                  <div className={styles.item}>
+                    <div className={styles.name}>Physics</div>
+                  </div>
+                  <div className={styles.item}>
+                    <div className={styles.name}>Chemistry</div>
+                  </div>
+                  <div className={styles.item}>
+                    <div className={styles.name}>Literature</div>
+                  </div>
+                  <div className={styles.item}>
+                    <div className={styles.name}>Russian Language</div>
+                  </div>
+                  <div className={styles.item}>
+                    <div className={styles.name}>English Language</div>
+                  </div>
+                  <div className={styles.item}>
+                    <div className={styles.name}>Other</div>
+                  </div>
+                </div>
+              </div> : null
+              }
             <div className={styles.searchBtn}>
               <svg
                 className="styles_active__YRO07"

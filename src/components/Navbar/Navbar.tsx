@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState, useEffect, useRef } from 'react';
 import styles from './navbar.module.scss';
 import Link from 'next/link';
@@ -11,6 +11,7 @@ const Navbar = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for burger menu
 
   const dropdownRef = useRef<HTMLLIElement | null>(null);
   const profileDropdownRef = useRef<HTMLDivElement | null>(null);
@@ -67,6 +68,18 @@ const Navbar = () => {
     };
   }, [isProfileDropdownOpen]);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add(styles.noScroll);
+    } else {
+      document.body.classList.remove(styles.noScroll);
+    }
+  
+    return () => {
+      document.body.classList.remove(styles.noScroll); // Cleanup on unmount
+    };
+  }, [isMenuOpen]);
+
   const handleLoginClick = () => {
     setIsPopupOpen(true);
   };
@@ -83,42 +96,47 @@ const Navbar = () => {
     setIsProfileDropdownOpen((prev) => !prev);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
     <>
-      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
-        <div className="container">
-          <div className={styles.body}>
-            <div className={styles.navWrap}>
-              <div className={styles.logo}>
-                <Link href="/"><LogoIcon width={60} height={24} /></Link>
-              </div>
-              <nav className={styles.nav}>
-                <ul className={styles.menu}>
-                 <li className={styles.item}>
-                    <Link className={styles.navLink} href="/ai-dashboard">AI Tutor</Link>
-                  </li>
-                  <li className={styles.item}>
-                    <Link className={styles.navLink} href="/write">Write</Link>
-                  </li>
-                  <li className={styles.item}>
-                    <Link className={styles.navLink} href="/homework">Solve homework</Link>
-                  </li>
-                  <li className={`${styles.item} ${styles.dropdown}`} ref={dropdownRef}>
-                    <span className={styles.navLink} onClick={toggleDropdown}>
-                      Text tools
-                    </span>
-                    <ul className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.open : ''}`}>
-                      <li className={styles.dropdownItem}>
-                        <Link href="/rewrite">Rewrite</Link>
-                      </li>
-                      <li className={styles.dropdownItem}>
-                        <Link href="/summarize">Summarize</Link>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <div className="container">
+        <div className={styles.body}>
+          <div className={styles.navWrap}>
+            <div className={styles.logo}>
+              <Link href="/"><LogoIcon width={60} height={24} /></Link>
             </div>
+            <nav className={`${styles.nav} ${isMenuOpen ? styles.menuOpen : ''}`}>
+              <ul className={styles.menu}>
+                <li className={styles.item}>
+                  <Link className={styles.navLink} href="/ai-dashboard">AI Tutor</Link>
+                </li>
+                <li className={styles.item}>
+                  <Link className={styles.navLink} href="/write">Write</Link>
+                </li>
+                <li className={styles.item}>
+                  <Link className={styles.navLink} href="/homework">Solve homework</Link>
+                </li>
+                <li className={`${styles.item} ${styles.dropdown}`} ref={dropdownRef}>
+                  <span className={styles.navLink} onClick={toggleDropdown}>
+                    Text tools
+                  </span>
+                  <ul className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.open : ''}`}>
+                    <li className={styles.dropdownItem}>
+                      <Link href="/rewrite">Rewrite</Link>
+                    </li>
+                    <li className={styles.dropdownItem}>
+                      <Link href="/summarize">Summarize</Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div className={styles.actions}>
             <div className={styles.profileDropdown} onClick={toggleProfileDropdown} ref={profileDropdownRef}>
               <div className={styles.profileName}>Ivan</div>
               <div className={styles.profileImg}><Image src='/user.svg' width={25} height={25} alt='user' /></div>
@@ -131,11 +149,38 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
+            <div className={styles.burger} onClick={toggleMenu}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            {/* <div className={styles.login} onClick={handleLoginClick}>Log in</div> */}
           </div>
         </div>
-      </header>
-      <AuthPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
-    </>
+      </div>
+    </header>
+
+    {isMenuOpen && (
+      <div className={styles.navPane}>
+        <button className={styles.closeButton} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+        </button>
+        <nav>
+          <ul>
+            <li onClick={toggleMenu}><Link href="/ai-dashboard">AI Tutor</Link></li>
+            <li onClick={toggleMenu}><Link href="/write">Write</Link></li>
+            <li onClick={toggleMenu}><Link href="/homework">Solve homework</Link></li>
+            <li onClick={toggleMenu}><Link href="/rewrite">Rewrite</Link></li>
+            <li onClick={toggleMenu}><Link href="/summarize">Summarize</Link></li>
+          </ul>
+        </nav>
+      </div>
+    )}
+
+
+    <AuthPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
+  </>
   );
 };
 
