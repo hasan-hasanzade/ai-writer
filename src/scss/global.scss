@@ -94,12 +94,14 @@ body {
     touch-action: none;
   }
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 .container {
   position: relative;
 }
 
-// HeroBlock Sparks animation
 
 .styles_active__YRO07 .styles_anim_24_sparks-u-6__UjcCy {
   animation: styles_anim_24_sparks-u-6_c_o__RgZWH 3.6s linear infinite normal forwards
@@ -271,6 +273,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  @media (max-width: 540px) {
+    flex-wrap: wrap;
+}
 }
 
 .react-tabs__tab {
@@ -289,6 +294,10 @@ body {
   &:hover {
     border: 1px solid transparent;
   }
+  @media (max-width: 410px) {
+    height: 35px;
+    width: 85px;
+}
 }
 
 .react-tabs__tab--selected {

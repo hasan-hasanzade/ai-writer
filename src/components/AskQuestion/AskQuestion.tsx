@@ -42,7 +42,7 @@ const AskQuestion: React.FC<AskQuestionProps> = ({ textBlockRef }) => {
               <input
                 className={styles.askInput}
                 type="text"
-                placeholder="Write me and I'll help you figure it out!"
+                placeholder="Ask me"
               />
               <button className={styles.btn}><ArrowIcon /></button>
           </div>

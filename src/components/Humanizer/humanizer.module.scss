@@ -1,4 +1,5 @@
 @import '../../scss/typhography';
+@import '../../scss/breakpoints';
 
 .rewrite {
     padding: 150px 0;
@@ -8,6 +9,9 @@
     font-size: 45px;
     text-align: center;
     font-weight: 900;
+    @media (max-width: $mobile) {
+        font-size: 30px;
+      }
   }
 
 .subtitle {
@@ -24,10 +28,16 @@
     background-color: #fff;
     border-radius: 24px;
     height: 450px;
+    @media (max-width: $mobile) {
+        flex-wrap: wrap;
+    }
 }
 
 .human {
     width: 50%;
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
 }
 
 
@@ -48,6 +58,15 @@
     padding: 20px 50px;
     border-top: 1px solid #e3e3e3;
     height: 97px;
+    @media (max-width: $mobile) {
+        border-bottom: 1px solid #e3e3e3;
+        padding: 10px 35px;
+    }
+    @media (max-width: 380px) {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
 }
 
 .words {
@@ -59,6 +78,7 @@
 .humanText {
     padding: 28px 36px;
     flex-grow: 1;
+    
 }
 
 .humanTextArea {
@@ -91,11 +111,24 @@
         margin-left: 7px;
         font-family: $fontFamily;
       }
+      @media (max-width: $tablet) {
+        width: 150px;
+        padding: 15px;
+      }
+      @media (max-width: 380px) {
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
   }
 
 .ai {
     width: 50%;
     border-left: 1px solid #e3e3e3;
+    @media (max-width: $mobile) {
+        width: 100%;
+        border: none;
+    }
 }
 
 .aiBody {
@@ -161,6 +194,9 @@
     border-top: 1px solid #e3e3e3;
     width: 100%;
     height: 97px;
+    @media (max-width: $mobile) {
+        padding: 10px 35px;
+    }
 }
 
 .copy {

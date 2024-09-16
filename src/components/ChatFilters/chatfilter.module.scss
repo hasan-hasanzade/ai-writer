@@ -10,6 +10,140 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 50px 0 20px;
+    gap: 20px;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.mobileBody {
+    display: none;
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+    }
+}
+
+.mobileSidebar {
+    position: fixed;
+    top: 0;
+    left: -285px;
+    width: 285px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 9999;
+  }
+
+  .mobileSidebarOpen {
+    left: 0;
+  }
+
+  .mobileSidebarContent {
+    padding: 20px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+  }
+
+  .sideBarBody {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.settingSidebar {
+    position: fixed;
+    top: 0;
+    right: -285px;
+    width: 285px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 9999;
+  }
+
+  .settingSidebarOpen {
+    right: 0;
+  }
+
+  .settingSidebarContent {
+    padding: 20px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+  }
+
+  .sideBarBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.settingWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settingOptions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.chatList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+   overflow-y: auto;
+}
+
+.newChat{
+    margin-top: 16px;
+    background-color: #22E0A7;
+    padding: 11.6px;
+    z-index: inherit;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.plus{
+    font-size: 25px;
+}
+
+.chatName {
+    padding: 15px;
+    background-color: transparent;
+    transition: background-color .25s ease;
+    border-radius: 12px;
+    &:hover {
+        background-color: #f6f6f6;
+    }
 }
 
 .main {

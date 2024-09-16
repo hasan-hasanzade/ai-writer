@@ -1,17 +1,22 @@
 @import '../../scss/typhography';
-
+@import '../../scss/breakpoints';
 
 .offer {
     position: relative;
     min-width: 340px;
+    @media (max-width: 1200px) {
+        display: flex;
+       flex-grow: 1;
+    //    min-width: 0;
+       width: 100%;
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .body {
-    // position: absolute;
-    // top: 0px;
-    // right: 0px;
-
-
     padding: 30px 0;
 }
 
@@ -22,6 +27,14 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    @media (max-width: 1200px) {
+        right: 15px;
+    }
+    @media (max-width: $tablet) {
+        width: 200px;
+        min-width: none;
+        bottom: 230px;
+    }
 }
 
 .grayBox {

@@ -7,7 +7,9 @@
 .inputWrapper {
     position: relative;
     width: 624px;
-
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .searchBody {
@@ -53,10 +55,21 @@
 
 .body {
     display: flex;
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 .filters {
     width: 247px;
+    @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+    }
 }
 
 .projectsLink {
@@ -168,6 +181,10 @@
     padding: 28px 32px;
     border-radius: 24px;
     width: 624px;
+    @media (max-width: 768px) {
+        margin-top: 20px;
+        width: 100%;
+    }
   }
 
   .cartTitle {

@@ -1,170 +1,167 @@
 @import '../../scss/typhography';
 
+.chat {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh; // Высота будет занимать все доступное пространство экрана
+  position: relative;
+  overflow: hidden; // Предотвращаем скролл у контейнера
+}
+
+.body {
+  width: 728px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%; // Занимает полное доступное пространство внутри chat
+  position: relative;
+  padding-bottom: 80px; // Отступ для chatActions
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
 .chatBody {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 32px;
     flex: 1 1 auto;
-    height: 450px;
-    overflow-y: scroll;
+    height: 100%; // Устанавливаем высоту на 100% от родителя
+    overflow-y: auto; // Включаем скролл только для chatBody
     padding: 0 10px;
     align-items: center;
+    padding-bottom: 190px; // Добавляем отступ снизу, чтобы последний элемент не перекрывался полем ввода
+  }
+
+  .chatActions {
+    width: 728px; // Ширина chatActions будет ограничена шириной chatBody
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-}
-
-.chat {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.body {
-    width: 728px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.incomingMessage {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 100%;
-}
-
-.incomingText {
-    width: 100%;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    border-radius: 18px;
-    border-top-left-radius: 0px;
-    width: 600px;
-    @media (max-width: 1024px) {
-        font-size: 14px;
-     }
-    @media (max-width: 670px) {
-        max-width: 80%;
-    }
-    @media (max-width: 480px) {
-        max-width: 100%;
-    }
-}
-
-.sentText {
-    text-align: left;
-    width: 66%;
-    background-color: #E9E9E9;
-    border-radius: 18px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    padding: 16px;
-    border-bottom-right-radius: 0px;
-    @media (max-width: 1024px) {
-       font-size: 14px;
-    }
-    @media (max-width: 670px) {
-        max-width: 80%;
-    }
-    @media (max-width: 480px) {
-        max-width: 100%;
-    }
-}
-
-.sentMessage {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-direction: column;
-}
-
-.options {
-    margin-top: 12px;
-    display: flex;
-    width: 600px;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.option {
-    padding: 10px;
-    border-radius: 18px;
-    background-color: #fff;
-    color: #2684FC;
-    border: 1px solid #2684FC;
-    
-}
-
-// .chatActions {
-//     display: flex;
-//     flex-direction: column;
-//     margin: 20px 0px 0px 0px;
-//     padding: 0 11px;
-//     border-radius: 18px;
-//     width: 100%;
-//     background-color: #fff;
-// }
-
-
-// .actions {
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: flex-end;
-//     width: 100%;
-//     background-color: #fff;
-//     height: 100%;
-//     height: 50px;
-// }
-
-
-.chatActions {
-    margin: 20px 0 10px;
-    display: flex;
-    align-items: center;
-    width: 100%;
     gap: 10px;
-}
+    padding: 10px 10px;
+    border-radius: 12px;
+    position: fixed; // Убедимся, что элемент фиксирован внизу
+    bottom: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    @media (max-width: 1024px) {
+        width: 100%;
+      }
+  }
 
-.btn {
+  .btn {
     background-color: #e2e8f0;
     width: 56px;
     height: 56px;
     border-radius: 12px;
     border: 1px solid transparent;
-    transition: all .25s ease;
+    transition: all 0.25s ease;
     &:hover {
-        background-color: #fff;
-        border: 1px solid #5a5a5a;
+      background-color: #fff;
+      border: 1px solid #5a5a5a;
     }
-}
+  }
 
-
-.chatInput {
-
-    transition: border-color .3s ease;
+  .chatInput {
     min-height: 56px;
-    background-color: #fff;
-    width: 91%;
+    width: calc(100% - 70px); // Ограничиваем ширину поля ввода, чтобы оно занимало оставшуюся ширину
     border-radius: 12px;
     padding-left: 16px;
     padding-right: 16px;
-    position: relative;
     border: 1px solid transparent;
-    transition: border-color .25s ease;
-    transition: background-color .25s ease;
-    font-family: $fontFamily;
     background-color: #e2e8f0;
+    transition: all 0.25s ease;
     &:focus {
-        border: 1px solid #5a5a5a;
-        background-color: #fff;
+      border: 1px solid #5a5a5a;
+      background-color: #fff;
     }
     &::placeholder {
-        font-family: $fontFamily;
+      font-family: $fontFamily;
     }
     font-size: 15px;
+  }
+
+.incomingMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.incomingText {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 18px;
+  border-top-left-radius: 0px;
+  width: 100%;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media (max-width: 670px) {
+    max-width: 80%;
+  }
+  @media (max-width: 480px) {
+    max-width: 100%;
+  }
+}
+
+.sentText {
+  text-align: left;
+  width: 66%;
+  background-color: #E9E9E9;
+  border-radius: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 16px;
+  border-bottom-right-radius: 0px;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media (max-width: 670px) {
+    max-width: 80%;
+  }
+  @media (max-width: 480px) {
+    max-width: 100%;
+    
+  }
+}
+
+.sentMessage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.options {
+  margin-top: 12px;
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  gap: 5px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.option {
+  padding: 10px;
+  border-radius: 18px;
+  background-color: #fff;
+  color: #2684FC;
+  border: 1px solid #2684FC;
+  @media (max-width: 480px) {
+   font-size: 13px;
+  }
 }

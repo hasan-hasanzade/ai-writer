@@ -118,6 +118,7 @@ const HeroBlock: React.FC<HeroBlockProps> = ({ isFocused = false, isUploaded = f
                     Ctrl <span className={styles.keyboard}>Ctrl</span> +{' '}
                     <span className={styles.keyboard}>v</span> to paste
                   </div>
+                  <div className={styles.mobileText}>Click Here to upload Image</div>
                   {uploadedFile && (
                   <div className={styles.fileName}>
                     Uploaded: {uploadedFile.name}
