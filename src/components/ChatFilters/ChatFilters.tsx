@@ -190,7 +190,7 @@ const ChatFilters = () => {
      </div>
      <div className={styles.mobileBody}>
         <MenuIcon onClick={toggleSidebar} width={24} height={24}/>
-        <LogoIcon width={60} height={24}/>
+        <Link href='/'><LogoIcon width={60} height={24}/></Link>
         <SettingsIcon width={24} height={24} onClick={toggleSettingSidebar}/>
      </div>
      {isSidebarOpen && <div className={styles.overlay} onClick={toggleSidebar}></div>}
