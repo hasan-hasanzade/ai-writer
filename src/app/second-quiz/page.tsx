@@ -291,7 +291,7 @@ const Page = () => {
             top: popupPosition.top,
             left: popupPosition.left,
             position: 'absolute',
-            zIndex: 9000,
+            zIndex: 1,
           }}
         >
           <div className={styles.popupContent}>

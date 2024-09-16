@@ -11,10 +11,25 @@
   padding: 64px 140px;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+  @media (max-width: 768px) {
+    border-radius: 0;
+    flex-wrap: wrap-reverse;
+    padding: 25px;
+}
+}
+
+.content {
+  @media (max-width: 768px) {
+    padding-left: 50px;
+  }
 }
 
 .quizBody {
   width: 522px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .title {
@@ -78,12 +93,20 @@
   padding: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 24px;
+  @media (max-width: 600px) {
+    width: 250px;
+    z-index: 1;
+  }
 }
 
 .popupContent {
   display: flex;
   align-items: center;
   gap: 25px;
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 
 .regenerateBtn {

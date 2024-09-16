@@ -11,12 +11,21 @@
     padding: 64px 140px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 768px) {
+        border-radius: 0;
+        flex-wrap: wrap-reverse;
+        padding: 25px;
+    }
 }
 
 
 .quizBody {
     width: 522px;
-  }
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
 
 .title {
     font-size: 35px;
