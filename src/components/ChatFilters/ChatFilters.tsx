@@ -26,7 +26,7 @@ const ChatFilters = () => {
 
   const toggleSettingSidebar = () => {
     setSettingSidebarOpen(!isSettingSidebarOpen);
-    if (isSidebarOpen) setSidebarOpen(false); // Close other sidebar
+    if (isSidebarOpen) setSidebarOpen(false);
   };
 
   const handleOutsideClick = (e:any) => {

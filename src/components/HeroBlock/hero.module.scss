@@ -26,6 +26,7 @@
     gap: 10px;
     @media (max-width: $mobile) {
       font-size: 30px;
+      line-height: 50px;
     }
 }
 .body {
@@ -127,7 +128,7 @@
       }
       @media (max-width: $mobileSmall) {
         margin-top: 25px;
-        width: 100%;
+        width: 150px;
         align-items: center;
         justify-content: center;
       }

@@ -14,7 +14,7 @@ interface OptionType {
 
 const page = () => {
   const [values, setValues] = useState([500]);
-  const [progress, setProgress] = useState(5); // Initial progress of 10%
+  const [progress, setProgress] = useState(5);
   const [selectedType, setSelectedType] = useState<OptionType | null>(null);
   const [selectedLevel, setSelectedLevel] = useState<OptionType | null>(null);
 
@@ -67,10 +67,6 @@ const page = () => {
 
             <div className={styles.textSize}>
               <div className={styles.sizeTitle}>Specify the text size:</div>
-              <div className={styles.minMax}>
-                <span className={styles.minValue}>Min: 500</span>
-                <span className={styles.maxValue}>Max: 12000</span>
-              </div>
               <div className={styles.wordRange}>
                 <Range
                   step={1}
@@ -88,6 +84,8 @@ const page = () => {
                         backgroundColor: "#EEF1F5",
                       }}
                     >
+                      <div className={styles.staticDot} style={{ left: '33%' }} />
+                      <div className={styles.staticDot} style={{ left: '64%' }} />
                       {children}
                     </div>
                   )}
@@ -95,42 +93,25 @@ const page = () => {
                     <div
                       {...props}
                       style={{
-                        height: '24px',
-                        width: '24px',
+                        height: '14px',
+                        width: '14px',
                         borderRadius: '50%',
-                        backgroundColor: '#fff',
-                        border: '2px solid #2684FC',
+                        backgroundColor: '#2684FC',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                         boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.2)',
                       }}
                     >
-                      <div
-                        style={{
-                          position: 'absolute',
-                          top: '-30px',
-                          color: '#000',
-                          background: '#2684FC',
-                          padding: '4px 8px',
-                          borderRadius: '4px',
-                          fontSize: '14px',
-                          fontWeight: 'bold',
-                        }}
-                      >
-                        {values[0]}
-                      </div>
-                      <div
-                        style={{
-                          width: '8px',
-                          height: '8px',
-                          backgroundColor: '#2684FC',
-                          borderRadius: '50%',
-                        }}
-                      />
                     </div>
                   )}
                 />
+              </div>
+              <div className={styles.minMax}>
+                <span className={styles.minValue}>500</span>
+                <span className={styles.minValue}>4500</span>
+                <span className={styles.minValue}>8000</span>
+                <span className={styles.maxValue}>12000</span>
               </div>
               <div className={styles.pageCount}>
                 Pages Count: <span>{(values[0] / 250).toFixed(0)}</span>
