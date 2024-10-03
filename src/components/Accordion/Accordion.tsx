@@ -6,7 +6,7 @@ import ArrDownIcon from '@public/arrdown.svg';
 
 interface AccordionProps {
   question: string;
-  answer: React.ReactNode; // Теперь можно передавать любой JSX
+  answer: React.ReactNode;
 }
 
 const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {

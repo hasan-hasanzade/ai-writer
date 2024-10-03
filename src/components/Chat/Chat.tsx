@@ -5,19 +5,10 @@ import styles from './chat.module.scss';
 import ArrowIcon from '@public/next.svg';
 
 const Chat = () => {
-  React.useEffect(() => {
-    document.body.classList.add('no-scroll');
-
-   
-    return () => {
-      document.body.classList.remove('no-scroll');
-    };
-  }, []);
   return (
     <div className={styles.chat}>
       <div className={styles.body}>
         <div className={styles.chatBody}>
-          {/* Сообщения */}
           <div className={styles.incomingMessage}>
             <div className={styles.incomingText}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet nibh non quam dignissim convallis. Vestibulum gravida in tortor sit amet ullamcorper. Suspendisse potenti.
@@ -84,16 +75,18 @@ const Chat = () => {
           </div>
         </div>
 
-        {/* Поле ввода */}
         <div className={styles.chatActions}>
-          <input
-            className={styles.chatInput}
-            type="text"
-            placeholder="Write me and I'll help you figure it out!"
-          />
-          <button className={styles.btn}>
-            <ArrowIcon />
-          </button>
+          <div className={styles.actionsWrap}>
+            <input
+              className={styles.chatInput}
+              type="text"
+              placeholder="Write me and I'll help you figure it out!"
+            />
+            <button className={styles.btn}>
+              <ArrowIcon />
+            </button>
+          </div>
+          <div className={styles.disclamer}>Qvalo may make mistakes. We recommend checking important information.</div>
         </div>
       </div>
     </div>

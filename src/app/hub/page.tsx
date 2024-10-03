@@ -43,6 +43,11 @@ const page = () => {
                 Questions <ArrRightIcon className={styles.arrowIcon} width={12} height={16}/>
               </Link>
             </div>
+            <div className={styles.tasks}>
+              <Link href='/projects' className={styles.tasksLink}>
+                Interactive textbook <ArrRightIcon className={styles.arrowIcon} width={12} height={16}/>
+              </Link>
+            </div>
           </nav>
 
           <div className={styles.content}>

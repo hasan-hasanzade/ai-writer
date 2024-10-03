@@ -64,7 +64,6 @@ const LoginPopup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
         </div>
       )}
 
-      {/* ForgotPopup shows when showForgotPopup is true */}
       {showForgotPopup && <ForgotPopup isOpen={showForgotPopup} onClose={() => setShowForgotPopup(false)} />}
     </>
   );

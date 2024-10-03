@@ -1,0 +1,133 @@
+.plans {
+    padding: 150px 0;
+}
+
+.title {
+    font-size: 45px;
+    text-align: center;
+    font-weight: 900;
+
+}
+
+.tabBody {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.plansBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemContent {
+    padding: 32px;
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+.checkedIcon {
+    color: #2684FC;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.desc {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.list {
+    margin-top: 25px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.link {
+    margin-top: 25px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.gift {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #F5F8FD;
+    border-radius: 24px;
+    line-height: 25px;
+}
+
+.price {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.btn {
+    margin-top: 25px;
+    width: 120px;
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+.discount {
+    background-color: #22E0A7;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 24px;
+    font-weight: 700;
+}
+
+.yearTab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 7px!important;
+    width: 140px;
+    text-align: center;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid #5a5a5a;
+    cursor: pointer;
+    transition: all .4s ease;
+    &:hover {
+      border: 1px solid transparent;
+    }
+    @media (max-width: 410px) {
+      height: 35px;
+      width: 85px;
+  }
+  &--selected {
+    background-color: red;
+  }
+}

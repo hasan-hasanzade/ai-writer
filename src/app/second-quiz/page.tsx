@@ -46,7 +46,6 @@ const Page = () => {
   }, []);
 
   useEffect(() => {
-    // Выделяем текст заголовка при первой загрузке
     setClickedItem('heading');
     const rect = headingRef.current?.getBoundingClientRect();
     if (rect) {

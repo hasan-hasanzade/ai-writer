@@ -29,7 +29,7 @@ const Reviews = () => {
             <Swiper
                 modules={[Navigation]}
                 spaceBetween={50}
-                slidesPerView={3}// Default value for mobile
+                slidesPerView={3}
               breakpoints={{
                 320: {
                   slidesPerView: 1,

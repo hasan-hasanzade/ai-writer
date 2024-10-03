@@ -1,0 +1,115 @@
+@import '../../scss/typhography';
+
+.quiz {
+    padding: 112px 0;
+}
+
+.body {
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, .1), 0 12px 12px rgb(0 0 0 / 4%), 0 12px 20px rgb(0 0 0 / 4%), 0 6px 5px rgb(0 0 0 / 4%), inset 0 5px 0 #3e4757;
+    padding: 64px 140px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 768px) {
+        border-radius: 0;
+        flex-wrap: wrap-reverse;
+        padding: 25px;
+    }
+}
+
+
+.quizBody {
+    width: 522px;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.subtitle {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+
+.sizeTitle {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.btnsBody {
+    display: flex;
+    gap: 10px;
+}
+
+.list {
+    margin-top: 50px;
+}
+
+.column {
+    width: 50%;
+}
+
+.listItem {
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+    width: 100%;
+    height: 100%;
+}
+
+.classBtn {
+    width: inherit;
+    padding: 16px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.25s ease, transform 3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #63a2f4;
+    }
+
+    &.active {
+        background-color: #2684FC;
+        transition: background-color 0.25s ease, transform 3s ease;
+        border: 1px solid transparent;
+    }
+}
+
+.btn {
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btnContinue {
+    margin-top: 25px;
+    width: 180px;
+    border-radius: 12px;
+      padding: 16px 33px 16px 33px;
+      background-color: #2684FC;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+     
+        transition: background-color .25s ease;
+      &:hover {
+        background-color: #63a2f4;
+      }
+}
