@@ -6,6 +6,7 @@
     @media (max-width: 1024px) {
         display: none;
     }
+    position: relative;
 }
 
 .logo {
@@ -13,9 +14,11 @@
 }
 
 .body {
+    position: fixed;
     display: flex;
     flex-direction: column;
     padding: 0 20px;
+    width: 275px;
 }
 
 .chatList {

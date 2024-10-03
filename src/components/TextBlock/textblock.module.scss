@@ -112,3 +112,101 @@
     flex-direction: column;
     gap: 12px;
 }
+
+.info {
+    margin-top: 15px;
+}
+
+
+// .ask {
+//     width: 728px;
+//     @media (max-width: 1130px) {
+//         width: 550px;
+//       }
+// }
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn {
+    background-color: #e2e8f0;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: all .25s ease;
+    flex-shrink: 0;
+    &:hover {
+        background-color: #fff;
+        border: 1px solid #5a5a5a;
+        
+    }
+}
+
+.title {
+    font-size: map-get($blockTitle, font-size);
+    font-weight: map-get($blockTitle, font-weight);
+    line-height: map-get($blockTitle, line-height);
+}
+
+.askInput {
+
+    transition: border-color .3s ease;
+    min-height: 56px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    border: 1px solid transparent;
+    transition: border-color .25s ease;
+    transition: background-color .25s ease;
+    font-family: $fontFamily;
+    background-color: #e2e8f0;
+    &:focus {
+        border: 1px solid #5a5a5a;
+        background-color: #fff;
+    }
+    &::placeholder {
+        font-family: $fontFamily;
+    }
+    font-size: 15px;
+    @media (max-width: 768px) {
+        width: 80%;
+      }
+
+    @media (max-width: 460px) {
+        width: 70%;
+    }
+}
+
+.options {
+    margin-top: 12px;
+    display: flex;
+    width: 600px;
+    flex-wrap: wrap;
+    gap: 5px;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
+  
+  .option {
+    padding: 10px;
+    border-radius: 18px;
+    background-color: #fff;
+    color: #2684FC;
+    border: 1px solid #2684FC;
+    @media (max-width: 480px) {
+     font-size: 13px;
+    }
+  }

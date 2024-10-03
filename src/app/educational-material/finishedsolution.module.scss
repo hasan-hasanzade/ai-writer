@@ -1,0 +1,31 @@
+.finished {
+    width: 1116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 150px;
+    @media (max-width: 1200px) {
+        gap: 20px;
+      }
+    @media (max-width: 768px) {
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+.blockWrapper {
+    @media (max-width: 1200px) {
+        gap: 20px;
+      }
+      @media (max-width: 1130px) {
+        width: 550px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+}
+
+.finishedEs {
+    background-color: #fff;
+}
