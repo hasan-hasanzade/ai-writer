@@ -19,7 +19,7 @@ const AdditionalLinks = () => {
                         <div className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in sequi, repudiandae nam ducimus nostrum.</div>
                     </div>
                     <div className={styles.imgWrap}>
-                        <Image className={styles.img} src={image1} alt="Sample Image 2" width={400} height={250} />
+                        <Image className={styles.img} src={image1} alt="Sample Image 2" width={300} height={200} quality={100}/>
                           <div className={styles.btn}>Learn More</div>
                     </div>
                 </Link>
@@ -29,18 +29,19 @@ const AdditionalLinks = () => {
                         <div className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in sequi, repudiandae nam ducimus nostrum.</div>
                     </div>
                     <div className={styles.imgWrap}>
-                        <Image src={image2} className={styles.img} alt="Sample Image 2" width={400} height={250} />
+                        <Image src={image2} className={styles.img} alt="Sample Image 2" width={300} height={200} quality={100}/>
                           <div className={styles.btn}>Learn More</div>
                     </div>
                 </Link>
                 <Link href='#' className={styles.item}>
                     <div className={styles.text}>
                         <div className={styles.heading}>Lorem Ipsum</div>
-                        <div className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in sequi, repudiandae nam ducimus nostrum.</div>
+                        <div className={styles.desc}>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Eum in sequi, repudiandae nam ducimus nostrum.</div>
+                        <div className={styles.btnLast}>Learn More</div>
                     </div>
                     <div className={styles.imgWrap}>
-                        <Image src={image3} className={styles.img} alt="Sample Image 2" width={400} height={250} />
-                          <div className={styles.btn}>Learn More</div>
+                        <Image src={image3} className={styles.img} alt="Sample Image 2" width={300} height={200} quality={100}/>
+
                     </div>
                 </Link>
             </div>

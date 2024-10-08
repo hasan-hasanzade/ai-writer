@@ -40,14 +40,27 @@
         height: 320px;
         order: 3;
         align-items: flex-start;
+        flex-direction: row;
+        @media (max-width: 1077px) {
+            flex-direction: column;
+        }
         .text {
             text-align: left;
+        }
+        .imgWrap {
+            margin-top: 100px;
+            text-align: right;
+            width: 100%;
+            @media (max-width: 1077px) {
+                text-align: center;
+                margin-top: 20px;
+            }
         }
     }
     &:hover {
         scale: 1.02;
     }
-    @media (max-width: $tablet) {
+    @media (max-width: 1077px) {
         width: 100%;
         height: 100%;
         &:last-child {
@@ -67,6 +80,12 @@
 
 .text {
     text-align: center;
+    @media (max-width: 1077px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 .heading {
@@ -99,4 +118,17 @@
     border: 1px solid #000;
     border-radius: 8px;
     background-color: #fff;
+}
+
+.btnLast {
+    margin-top: 20px;
+    height: 48px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
