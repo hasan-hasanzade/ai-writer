@@ -14,10 +14,14 @@ const page = () => {
         <h1 className={styles.title}>Pick your perfect plan</h1>
         <Tabs>
             <TabList className={styles.tabBody}>
-              <div className={styles.tabs}>
-                <Tab as="button" role="tab">For a month</Tab>
-                <Tab as="button" role="tab" className={styles.yearTab}>For a year <span className={styles.discount}>-15%</span></Tab>
-              </div>
+            <div className={styles.tabs}>
+              <Tab as="button" role="tab" className={styles.monthTab} selectedClassName={styles.activeTab}>
+                For a month
+              </Tab>
+              <Tab as="button" role="tab" className={styles.yearTab} selectedClassName={styles.activeTab}>
+                For a year <span className={styles.discount}>-15%</span>
+              </Tab>
+            </div>
             </TabList>
 
             <TabPanel>
