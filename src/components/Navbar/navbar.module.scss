@@ -40,6 +40,7 @@
     display: flex;
     align-items: center;
     gap: 50px;
+    height: 100%;
 }
 
 .navLink {
@@ -53,17 +54,29 @@
     transition: transform 0.3s ease;
 }
 
+.nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 .body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 64px;
+    height: 64px;
+}
+
+.item {
+    height: 100%;
+    display: flex;
+    align-items: center; 
 }
 
 .menu {
     display: flex;
     align-items: center;
     gap: 24px;
+    height: 100%;
     @media (max-width: $mobile) {
         display: none;
     }
@@ -146,6 +159,14 @@
     cursor: pointer;
 }
 
+.overlay {
+    position: absolute;
+    top: 92%;
+    padding-top: 10px;
+z-index: 1000;
+    width: 100%;
+}
+
 .dropdown {
     position: relative;
     z-index: 100;
@@ -153,7 +174,7 @@
 
     .dropdownMenu {
         position: absolute;
-        top: 270%;
+        top: 110%;
         left: 0;
         background-color: #fff;
         padding: 10px;

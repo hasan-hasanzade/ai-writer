@@ -117,7 +117,7 @@ const Navbar = () => {
     if (window.innerWidth >= 992) {
       dropdownTimeoutRef.current = setTimeout(() => {
         setIsDropdownOpen(false);
-      }, 1000);
+      }, 0);
     }
   };
 
@@ -158,14 +158,16 @@ const Navbar = () => {
                     <span className={styles.navLink} onClick={toggleDropdown}>
                       Text tools <ChavronIcon className={styles.chevronIcon} />
                     </span>
-                    <ul className={styles.dropdownMenu}>
-                      <li className={styles.dropdownItem}>
-                        <Link href="/rewrite">Rewrite</Link>
-                      </li>
-                      <li className={styles.dropdownItem}>
-                        <Link href="/summarize">Summarize</Link>
-                      </li>
-                    </ul>
+                    <div className={styles.overlay}>
+                      <ul className={styles.dropdownMenu}>
+                        <li className={styles.dropdownItem}>
+                          <Link href="/rewrite">Rewrite</Link>
+                        </li>
+                        <li className={styles.dropdownItem}>
+                          <Link href="/summarize">Summarize</Link>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                 </ul>
               </nav>

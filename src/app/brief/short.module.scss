@@ -1,13 +1,12 @@
 .short {
-    width: 1116px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     @media (max-width: 1200px) {
         gap: 20px;
       }
-    @media (max-width: 768px) {
+    @media (max-width: 845px) {
         justify-content: center;
-        width: 100%;
     }
 }
 
