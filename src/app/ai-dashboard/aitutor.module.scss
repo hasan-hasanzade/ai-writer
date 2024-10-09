@@ -3,10 +3,12 @@
     background-color: #fff;
 }
 
-.chatside {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow-y: auto; // Allow scrolling
-    position: relative;
-}
+  .chatside {
+    margin-left: 275px;
+    flex-grow: 1;
+    height: 100vh;
+    overflow-y: auto;
+    @media (max-width: 1024px) {
+        margin-left: 0;
+    }
+  }
