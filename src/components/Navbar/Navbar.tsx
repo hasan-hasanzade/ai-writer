@@ -181,6 +181,9 @@ const Navbar = () => {
                     <Link href="/projects">My projects</Link>
                   </li>
                   <li className={styles.dropdownItem}>
+                    <Link href="/profile">Settings</Link>
+                  </li>
+                  <li className={styles.dropdownItem}>
                     <div>Log out</div>
                   </li>
                 </ul>

@@ -1,0 +1,60 @@
+.purchased {
+    padding: 100px 0;
+}
+
+.title {
+    font-size: 45px;
+    text-align: left;
+    font-weight: 900;
+    @media (max-width: 768px) {
+        font-size: 30px;
+      }
+}
+
+.body {
+    margin-top: 50px;
+    border: 1px solid #000;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.current,.days,.cost {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.planTitle {
+    color: #565656;
+    font-size: 12px;
+}
+
+.text {
+    font-weight: 700;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 150px;
+    // border: 1px solid #000;
+    background-color: #2684FC;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.bottom {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

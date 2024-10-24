@@ -71,6 +71,7 @@ const ChatFilters = () => {
                         height: '48px',
                         padding:  '0 8px',
                         // fontSize: '16px',
+                        width: '206px',
                         lineHeight: '1.5',
                         transition: 'all 0.2s ease',
                         backgroundColor: '#EEF1F5',
@@ -117,6 +118,7 @@ const ChatFilters = () => {
                         lineHeight: '1.5',
                         transition: 'all 0.2s ease',
                         backgroundColor: '#EEF1F5',
+                        width: '206px',
                         cursor: 'pointer',
                         svg: {
                             transform: state.isFocused ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -158,6 +160,7 @@ const ChatFilters = () => {
                         padding:  '0 8px',
                         // fontSize: '16px',
                         lineHeight: '1.5',
+                        width: '206px',
                         transition: 'all 0.2s ease',
                         backgroundColor: '#EEF1F5',
                         cursor: 'pointer',

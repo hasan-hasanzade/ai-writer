@@ -1,0 +1,202 @@
+.profile {
+    padding: 100px 0;
+}
+
+.title {
+    font-size: 45px;
+    text-align: left;
+    font-weight: 900;
+    @media (max-width: 768px) {
+        font-size: 30px;
+      }
+}
+.body {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+    }
+}
+.info {
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+.nameBody {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+.user {
+    background-color: #fff;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.renameIcon {
+    cursor: pointer;
+}
+
+.dataBody {
+    width: 60%;
+    @media (max-width: 768px) {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+}
+.details {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    span {
+        word-break: break-all;
+    }
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.password {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background-color: #F5F8FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.btn {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 100px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    &Content {
+      background-color: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+
+      h2 {
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+
+      .saveBtn, .closeBtn {
+        display: inline-block;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: 400!important;
+        font-size: 15px;
+      }
+
+      .saveBtn {
+        background-color: #2684FC;
+        color: #000;
+      }
+
+      .closeBtn {
+        color: #000;
+      }
+    }
+}
+
+
+.input {
+    transition: border-color .3s ease;
+    min-height: 56px;
+    width: 100%;
+    background-color: #F5F8FD;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    border: 1px solid transparent;
+    transition: border-color .25s ease;
+    transition: background-color .25s ease;
+    &:focus {
+      border: 1px solid #5a5a5a;
+      background-color: #fff;
+  }
+    font-size: 15px;
+}
+
+.inputs {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btns {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
