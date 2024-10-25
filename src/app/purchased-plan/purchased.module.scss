@@ -2,6 +2,11 @@
     padding: 100px 0;
 }
 
+.purchasedContainer {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
 .title {
     font-size: 45px;
     text-align: left;
@@ -13,8 +18,8 @@
 
 .body {
     margin-top: 50px;
-    border: 1px solid #000;
     padding: 25px;
+    background: linear-gradient(90deg, #1ea6b8 0%, #3dbf96 100%);
     border-radius: 20px;
 }
 
@@ -22,6 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .current,.days,.cost {
@@ -31,22 +37,32 @@
 }
 
 .planTitle {
-    color: #565656;
+    color: #dedede;
     font-size: 12px;
+    font-weight: 500;
 }
 
 .text {
     font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+    width: 100px;
+}
+
+.content {
+    max-width: 600px;
+    width: 100%;
 }
 
 .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 12px 15px;
     width: 150px;
     // border: 1px solid #000;
-    background-color: #2684FC;
+    background-color: #fff;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 400;
@@ -54,6 +70,7 @@
 
 .bottom {
     margin-top: 25px;
+    gap: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;

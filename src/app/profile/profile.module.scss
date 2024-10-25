@@ -2,6 +2,11 @@
     padding: 100px 0;
 }
 
+.profileContainer {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
 .title {
     font-size: 45px;
     text-align: left;
@@ -30,10 +35,10 @@
     font-weight: 600;
 }
 .user {
-    background-color: #fff;
+    background-color: #F5F8FD;
     padding: 15px;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +46,7 @@
 }
 
 .name {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .renameIcon {
@@ -57,7 +62,7 @@
 
 }
 .details {
-    background-color: #fff;
+    background-color: #F5F8FD;
     width: 100%;
     border-radius: 20px;
     padding: 30px;
@@ -95,7 +100,7 @@
 .icon {
     width: 45px;
     height: 45px;
-    background-color: #F5F8FD;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,11 +115,11 @@
     justify-content: center;
     padding: 15px;
     width: 100px;
-    border: 1px solid #000;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #F5F8FD;
     font-size: 16px;
     font-weight: 400;
+    color: #2684FC;
 }
 
 .popup {
