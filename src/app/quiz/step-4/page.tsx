@@ -1,12 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import styles from '../quiz.module.scss';
 import Link from 'next/link';
 import ProgressBar from '@/components/ProgressBar/ProgressBar';
 import { useSearchParams } from 'next/navigation';
 
-const Page = () => {
+const PageContent = () => {
   const [comment, setComment] = useState('');
   const searchParams = useSearchParams();
   const initialProgress = parseInt(searchParams.get('progress') || '0', 10);
@@ -51,5 +51,11 @@ const Page = () => {
     </div>
   );
 };
+
+const Page = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <PageContent />
+  </Suspense>
+);
 
 export default Page;

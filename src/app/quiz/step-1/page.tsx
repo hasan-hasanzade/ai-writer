@@ -1,17 +1,15 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from '../quiz.module.scss';
 import Link from 'next/link';
 import ProgressBar from '@/components/ProgressBar/ProgressBar';
 
 const Page = () => {
   const [topic, setTopic] = useState('');
-  const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
-    setProgress(topic.trim() ? 20 : 0);
-  }, [topic]);
+  // Прогресс напрямую зависит от наличия текста в поле topic
+  const progress = topic.trim() ? 20 : 0;
 
   return (
     <div className={styles.quiz}>
@@ -35,7 +33,10 @@ const Page = () => {
             </div>
 
             <div className={styles.btn}>
-              <Link className={styles.btnContinue} href={`/quiz/step-2?progress=${progress}`}>
+              <Link 
+                className={styles.btnContinue} 
+                href={`/quiz/step-2?progress=${progress}`}
+              >
                 Continue
               </Link>
             </div>

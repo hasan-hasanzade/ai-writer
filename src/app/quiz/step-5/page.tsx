@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef, useEffect, MutableRefObject } from 'react';
+import React, { useState, useRef, useEffect, MutableRefObject, Suspense } from 'react';
 import styles from '../sec-quiz.module.scss';
 import SparkIcon from '@public/spark.svg';
 import PrevIcon from '@public/quiz-prev.svg';
@@ -9,7 +9,7 @@ import ProgressBar from '@/components/ProgressBar/ProgressBar';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
-const Page = () => {
+const PageContent = () => {
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
     const [clickedItem, setClickedItem] = useState<string | null>(null);
     const [showPopup, setShowPopup] = useState(false);
@@ -314,5 +314,11 @@ const Page = () => {
     </div>
   );
 };
+
+const Page = () => (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
+  );
 
 export default Page;
