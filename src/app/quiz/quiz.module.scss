@@ -1,0 +1,202 @@
+@import '../../scss/typhography';
+
+.quiz {
+    padding: 112px 0;
+}
+
+.body {
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, .1), 0 12px 12px rgb(0 0 0 / 4%), 0 12px 20px rgb(0 0 0 / 4%), 0 6px 5px rgb(0 0 0 / 4%), inset 0 5px 0 #3e4757;
+    padding: 64px 140px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 768px) {
+        border-radius: 0;
+        flex-wrap: wrap-reverse;
+        padding: 25px;
+    }
+}
+
+.input {
+    transition: border-color .3s ease;
+    min-height: 56px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    border: 1px solid transparent;
+    transition: border-color .25s ease;
+    transition: background-color .25s ease;
+    font-family: $fontFamily;
+    background-color: #e2e8f0;
+    &:focus {
+        border: 1px solid #5a5a5a;
+        background-color: #fff;
+    }
+    &::placeholder {
+        font-family: $fontFamily;
+    }
+    font-size: 15px;
+}
+
+.quizBody {
+    width: 522px;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.textTopic {
+    margin-top: 50px;
+    border-radius: 4px;
+}
+
+.topicTitle {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 25px;
+    line-height: 20px;
+}
+
+.textSize {
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    padding: 30px 20px;
+    border-radius: 4px;
+}
+
+.sizeTitle {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.minMax {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.minValue,.maxValue {
+    font-weight: 400;
+    font-size: 13px;
+    color: #ccc;
+}
+
+
+.wordRange {
+    margin-top: 45px;
+}
+
+.pageCount {
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+.textType {
+    margin-top: 30px;
+}
+
+.typeTitle {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.textLevel {
+    margin-top: 30px;
+}
+
+.levelTitle {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.textComment {
+    margin-top: 30px;
+}
+
+.commentTitle {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.comment {
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.commentArea {
+    width: inherit;
+    padding: 20px 16px;
+    resize: none;
+    background-color: #EEF1F5;
+    border-radius: 12px;
+    height: 150px;
+    font-family: $fontFamily;
+}
+
+.btn {
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btnContinue {
+    width: 180px;
+    border-radius: 12px;
+      padding: 16px 33px 16px 33px;
+      background-color: #2684FC;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+     
+        transition: background-color .25s ease;
+      &:hover {
+        background-color: #63a2f4;
+      }
+}
+
+.rangeWrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .staticDot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #979797;
+    border-radius: 50%;
+  }

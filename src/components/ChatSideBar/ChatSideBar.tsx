@@ -9,33 +9,33 @@ import RenameIcon from '@public/rename.svg';
 
 const ChatSideBar = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
-  const [isEditing, setIsEditing] = useState<string | null>(null); // Track the chat being edited
-  const [chatNames, setChatNames] = useState<string[]>(Array.from({ length: 20 }, () => 'Chat Name')); // Store names of each chat
-  const [editValue, setEditValue] = useState<string>(''); // Track the value of the editing input
+  const [isEditing, setIsEditing] = useState<string | null>(null); 
+  const [chatNames, setChatNames] = useState<string[]>(Array.from({ length: 20 }, () => 'Chat Name'));
+  const [editValue, setEditValue] = useState<string>('');
   const popupRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleOpenPopup = (id: string) => {
     setActivePopup(prev => (prev === id ? null : id));
-    setIsEditing(null); // Close editing mode if popup is toggled
+    setIsEditing(null);
   };
 
   const handleClosePopup = () => {
     setActivePopup(null);
-    setIsEditing(null); // Reset editing mode when popup is closed
+    setIsEditing(null);
   };
 
   const handleRenameClick = (index: string) => {
     setIsEditing(index);
-    setEditValue(chatNames[Number(index)]); // Set the current chat name in the edit input
-    setActivePopup(null); // Close popup when renaming is selected
+    setEditValue(chatNames[Number(index)]);
+    setActivePopup(null);
   };
 
   const handleSaveRename = (index: string) => {
     const updatedNames = [...chatNames];
-    updatedNames[Number(index)] = editValue; // Save the new name in the chatNames array
+    updatedNames[Number(index)] = editValue;
     setChatNames(updatedNames);
-    setIsEditing(null); // Exit editing mode
+    setIsEditing(null);
   };
 
   useEffect(() => {
@@ -43,9 +43,9 @@ const ChatSideBar = () => {
       if (popupRef.current && !popupRef.current.contains(event.target as Node) &&
           inputRef.current && !inputRef.current.contains(event.target as Node)) {
         if (isEditing !== null) {
-          handleSaveRename(isEditing); // Save name if clicked outside while editing
+          handleSaveRename(isEditing);
         }
-        handleClosePopup(); // Close popup
+        handleClosePopup();
       }
     };
 

@@ -2,7 +2,7 @@
 import React from 'react'
 import styles from './sitemap.module.scss'
 import Link from 'next/link'
-import Accordion from '../Accordion/Accordion'
+import AccordionSiteMap from '../AccordionSiteMap/AccordionSiteMap'
 
 const SiteMap = () => {
   return (
@@ -67,10 +67,11 @@ const SiteMap = () => {
                 </div>
             </div>
         </div>
-        <div className={styles.accordionBody}>
+      </div>
+      <div className={styles.accordionBody}>
         <h2 className={styles.title}>Sitemap</h2>
         <div className={styles.wrap}>
-            <Accordion 
+            <AccordionSiteMap 
                 question='AI Tutor' 
                 answer={(
                     <div className={styles.links}>
@@ -85,7 +86,7 @@ const SiteMap = () => {
                     </div>
                 )}
             />
-            <Accordion 
+            <AccordionSiteMap 
                 question='Homework Helper'
                 answer={(
                     <div className={styles.links}>
@@ -104,7 +105,7 @@ const SiteMap = () => {
                     </div>
                 )}
             />
-            <Accordion 
+            <AccordionSiteMap 
                 question='Writing Companion'
                 answer={(
                     <div className={styles.links}>
@@ -119,7 +120,7 @@ const SiteMap = () => {
                     </div>
                 )}
             />
-            <Accordion 
+            <AccordionSiteMap 
                 question='Text Tools'
                 answer={(
                     <div className={styles.links}>
@@ -128,7 +129,7 @@ const SiteMap = () => {
                     </div>
                 )}
             />
-            <Accordion 
+            <AccordionSiteMap 
                 question='Library'
                 answer={(
                     <div className={styles.links}>
@@ -139,7 +140,6 @@ const SiteMap = () => {
             />
         </div>
         </div>
-      </div>
     </section>
   )
 }

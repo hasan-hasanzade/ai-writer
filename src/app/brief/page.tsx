@@ -1,10 +1,13 @@
-import React from 'react'
+'use client'
+
+import React, { useRef } from 'react';
 import Breadcrumb from '@/components/BreadCrumb/BreadCrumb'
 import TextBlock from '@/components/TextBlock/TextBlock'
-import OfferBlock from '@/components/OfferBlock/OfferBlock'
+import GetAnEssayBanner from '@/components/GetAnEssayBanner/GetAnEssayBanner';
 import styles from './short.module.scss'
 
 const page = () => {
+  const textBlockRef = useRef<HTMLDivElement | null>(null);
   const grayBoxData = {
     title: 'Create a full text',
     subtitle: 'If the project structure suits you, create the full text',
@@ -25,7 +28,6 @@ const page = () => {
     { label: 'Projects', link: '/projects' }
   ]
 
-
   return (
     <div className={styles.shortMain}>
       <div className='container'>
@@ -33,8 +35,10 @@ const page = () => {
           <Breadcrumb items={breadcrumbs} />
         </div>
         <div className={styles.short}>
-          <TextBlock/>
-          <OfferBlock showWhiteBox={true} grayBoxData={grayBoxData} whiteBoxData={whiteBoxData} />
+          <div className={styles.blockWrapper} ref={textBlockRef}>
+            <TextBlock />
+            <GetAnEssayBanner textBlockRef={textBlockRef} />
+          </div>
         </div>
       </div>
     </div>
