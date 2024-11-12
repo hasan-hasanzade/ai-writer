@@ -14,7 +14,7 @@
 
 .body {
     position: absolute;
-    left: -15px;
+    left: -11px;
     // bottom: 28px;
     z-index: 1000;
     @media (max-width: 768px) {
@@ -26,7 +26,7 @@
 .fixed {
     position: fixed;
     bottom: 0;
-    width: 730px;
+    width: 740px;
     padding: 20px 0 20px 10px;
       @media (max-width: 992px) {
         width: 768px;

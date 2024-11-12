@@ -8,19 +8,6 @@ import styles from './short.module.scss'
 
 const page = () => {
   const textBlockRef = useRef<HTMLDivElement | null>(null);
-  const grayBoxData = {
-    title: 'Create a full text',
-    subtitle: 'If the project structure suits you, create the full text',
-    link: '/',
-    buttonText: 'Create'
-  }
-
-  const whiteBoxData = {
-    title: 'Need a different project?',
-    subtitle: 'Create a project using a neural network',
-    link: '/',
-    buttonText: 'New Project'
-  }
 
   const breadcrumbs = [
     { label: 'Main', link: '/' },
