@@ -36,7 +36,6 @@ const PageContent = () => {
             </div>
 
             <div className={styles.textComment}>
-              <div className={styles.commentTitle}>Write any comments that need to be addressed:</div>
               <div className={styles.comment}>
                 <textarea
                   className={styles.commentArea}
