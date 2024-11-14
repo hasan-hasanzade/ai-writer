@@ -159,6 +159,10 @@
     border-radius: 12px;
     height: 150px;
     font-family: $fontFamily;
+    &:focus {
+        border: 1px solid #5a5a5a;
+        background-color: #fff;
+    }
 }
 
 .btn {
