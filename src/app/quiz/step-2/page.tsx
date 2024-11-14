@@ -43,7 +43,7 @@ const PageContent = () => {
                       {...props}
                       style={{
                         ...props.style,
-                        height: "3px",
+                        height: "5px",
                         width: "100%",
                         backgroundColor: "#EEF1F5",
                       }}
@@ -57,8 +57,8 @@ const PageContent = () => {
                     <div
                       {...props}
                       style={{
-                        height: '14px',
-                        width: '14px',
+                        height: '15px',
+                        width: '15px',
                         borderRadius: '50%',
                         backgroundColor: '#2684FC',
                         display: 'flex',
@@ -83,6 +83,9 @@ const PageContent = () => {
             </div>
 
             <div className={styles.btn}>
+              <Link className={styles.btnBack} href={`/quiz/step-1`}>
+                Back
+              </Link>
               <Link className={styles.btnContinue} href={`/quiz/step-3?progress=${progress}`}>
                 Continue
               </Link>

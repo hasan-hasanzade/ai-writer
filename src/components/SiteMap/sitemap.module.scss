@@ -57,9 +57,9 @@
 .link {
     font-size: 13px;
     @media (max-width: $mobile) {
-        font-size: 12px;
+        font-size: 14px;
     }
-    font-weight: 300;
+    font-weight: 400;
     color: #0000008a;
     transition: all .3s ease;
     &:hover {

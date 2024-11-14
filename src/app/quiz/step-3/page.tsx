@@ -163,6 +163,9 @@ const PageContent = () => {
             </div>
 
             <div className={styles.btn}>
+              <Link className={styles.btnBack} href={`/quiz/step-2`}>
+                Back
+              </Link>
               <Link className={styles.btnContinue} href={`/quiz/step-4?progress=${progress}`}>
                 Continue
               </Link>

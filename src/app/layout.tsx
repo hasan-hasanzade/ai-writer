@@ -1,11 +1,11 @@
 'use client'
 import { usePathname } from "next/navigation";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import "../scss/global.scss";
 
-const inter = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700", "800", "900"],
   display: "swap",

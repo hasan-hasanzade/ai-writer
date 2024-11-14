@@ -1,15 +1,22 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from '../quiz.module.scss';
 import Link from 'next/link';
 import ProgressBar from '@/components/ProgressBar/ProgressBar';
 
 const Page = () => {
   const [topic, setTopic] = useState('');
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const [isFocused, setIsFocused] = useState(true);
 
-  // Прогресс напрямую зависит от наличия текста в поле topic
   const progress = topic.trim() ? 20 : 0;
+
+  useEffect(() => {
+    if (isFocused && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isFocused]);
 
   return (
     <div className={styles.quiz}>
@@ -22,13 +29,13 @@ const Page = () => {
             </div>
 
             <div className={styles.textTopic}>
-              <div className={styles.topicTitle}>Enter the topic of the essay</div>
               <input
                 className={styles.input}
                 type="text"
-                placeholder="......"
+                placeholder="Please, enter the topic"
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)} 
+                ref={inputRef}
               />
             </div>
 

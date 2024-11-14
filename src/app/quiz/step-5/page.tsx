@@ -281,7 +281,12 @@ const PageContent = () => {
               </ol>
             </div>
             <div className={styles.btn}>
-              <Link href='#' className={styles.btnContinue}>Submit</Link>
+              <Link className={styles.btnBack} href={`/quiz/step-4`}>
+                Back
+              </Link>
+              <button className={styles.btnContinue}>
+                Continue
+              </button>
             </div>
           </div>
           <ProgressBar progress={progress} />
