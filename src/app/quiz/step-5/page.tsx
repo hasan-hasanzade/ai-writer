@@ -285,7 +285,7 @@ const PageContent = () => {
                 Back
               </Link>
               <button className={styles.btnContinue}>
-                Continue
+                Submit
               </button>
             </div>
           </div>

@@ -142,6 +142,11 @@
   align-items: center;
 }
 
+.deleteIcon {
+  fill: #000;
+  stroke: #fff;
+}
+
 .btn {
   border-top: 1px solid #ccc;
   padding-top: 30px;
@@ -165,9 +170,24 @@
     &:hover {
       background-color: #63a2f4;
     }
+    margin-left: 10px;
+    max-width: 100%;
 }
 
-.deleteIcon {
-  fill: #000;
-  stroke: #fff;
+
+.btnBack {
+  width: 180px;
+  border-radius: 12px;
+    padding: 16px 33px 16px 33px;
+    background-color: #EEF1F5;
+    color: #2684FC;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    max-width: 100%;
+   
+      transition: background-color .25s ease;
+    &:hover {
+      background-color: #e4e7ea;
+    }
 }
